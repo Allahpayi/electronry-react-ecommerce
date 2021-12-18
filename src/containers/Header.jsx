@@ -10,17 +10,9 @@ const HeaderContainer = styled.div`
   background-color: var(--color-main);
 `;
 const NavbarMenu = styled(Navbar)`
-  &.active {
-    position: absolute;
-    opacity: 1;
-    visibility: visible;
-    user-select: none;
-  }
+  position: absolute;
   @media (min-width: 762px) {
     position: static;
-    opacity: 1;
-    visibility: visible;
-    user-select: none;
   }
 `;
 const HeaderTop = styled.p`
@@ -48,7 +40,6 @@ const HeaderTop = styled.p`
     }
   }
 `;
-
 const HeaderBottom = styled.div`
   display: flex;
   justify-content: space-between;
@@ -104,10 +95,7 @@ const Header = () => {
         <Logo to="/">
           E<span>R</span>
         </Logo>
-        <NavbarMenu
-          className={`${isOpen ? "active" : ""}`}
-          toggle={[isOpen, setIsOpen]}
-        />
+        <NavbarMenu toggle={[isOpen, setIsOpen]} />
         <HeaderIconGroup>
           <SignIn />
           <WishList />

@@ -70,7 +70,7 @@ const SideNavContentHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--color-main2);
+  border-bottom: 1px solid var(--border-color);
 `;
 const SideNavTitle = styled.h2``;
 const CloseIcon = styled.i`

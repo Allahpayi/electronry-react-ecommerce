@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { categories } from "../../config";
 
 const DropdownMenu = styled.ul`
   position: absolute;
@@ -23,7 +24,10 @@ const DropdownTitle = styled.h2`
   display: none;
   position: relative;
   padding: 0.8rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
   text-align: center;
+  color: var(--color-black);
   background-color: var(--color-main2);
   @media (max-width: 762px) {
     display: block;
@@ -36,10 +40,10 @@ const DropdownItem = styled.li`
     width: 100%;
     padding: 1rem 2rem;
     margin-right: 1.8rem;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--color-main2);
+    border-bottom: 1px solid var(--border-color);
   }
 `;
 const DropdownLink = styled(Link)`
@@ -69,13 +73,13 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-const Dropdown = ({ items, categoryName, className }) => {
+const Dropdown = ({ categoryName, className }) => {
   return (
     <DropdownMenu className={className}>
       <DropdownTitle>{categoryName}</DropdownTitle>
-      {items.map((item, index) => (
-        <DropdownItem key={index}>
-          <DropdownLink to={item.url}>{item.name}</DropdownLink>
+      {categories.map((category) => (
+        <DropdownItem key={category.categoryId}>
+          <DropdownLink to={category.url}>{category.name}</DropdownLink>
         </DropdownItem>
       ))}
     </DropdownMenu>

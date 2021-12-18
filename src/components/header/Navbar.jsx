@@ -83,7 +83,7 @@ const NavLink = styled(Link)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
   color: var(--color-black);
@@ -107,7 +107,6 @@ const NavLink = styled(Link)`
 const ArrowIcon = styled.i``;
 
 const NavItem = styled.li`
-  font-style: normal;
   position: relative;
   padding: 1rem 0;
   margin-right: 1.8rem;
@@ -117,7 +116,7 @@ const NavItem = styled.li`
   }
   @media (max-width: 762px) {
     padding: 1rem 2rem;
-    border-bottom: 1px solid var(--color-main2);
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
   }
 
@@ -184,14 +183,11 @@ const Navbar = ({ toggle, className }) => {
                 {navItem.icon ? (
                   <ArrowIcon className="far fa-chevron-down"></ArrowIcon>
                 ) : (
-                  ""
+                  navItem.icon
                 )}
               </NavLink>
               {navItem.children.length > 0 ? (
-                <DropdownMenu
-                  categoryName={navItem.name}
-                  items={navItem.children}
-                />
+                <DropdownMenu categoryName={navItem.name} />
               ) : (
                 ""
               )}

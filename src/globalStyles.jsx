@@ -6,9 +6,13 @@ const variables = css`
     --color-main: white;
     --color-main2: #f8f8f8;
     --color-red: #ef6454;
-    --color-black: #232323;
+    --color-black: #0b0335;
+    --color-black2: #3c3c3c;
     --link-color: #007bff;
+    --border-color: #d2d2d2;
     --overlay: rgba(35, 35, 35, 0.8);
+    --font-arimo: "Arimo", sans-serif;
+    --font-prompt: "Prompt", sans-serif;
     --font-dm-sans: "DM Sans", sans-serif;
   }
 `;
@@ -24,9 +28,8 @@ ${variables};
       font-size:16px
     }
     body{
-      font-family:var(--font-dm-sans);
+      font-family:var(--font-prompt);
       overflow-x: hidden;
-      background:red;
     }
     button,
     input,
@@ -48,8 +51,8 @@ ${variables};
     @media (max-width:762px){
       html{
       font-size:13px
-    }
       }
+    }
 `;
 
 export default GlobalStyle;
