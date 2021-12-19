@@ -6,10 +6,14 @@ const variables = css`
     --color-main: white;
     --color-main2: #f8f8f8;
     --color-red: #ef6454;
+    --light-green: #10ffda;
     --color-black: #0b0335;
     --color-black2: #3c3c3c;
+    --color-gray: #777777;
     --link-color: #007bff;
     --border-color: #d2d2d2;
+    --shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     --overlay: rgba(35, 35, 35, 0.8);
     --font-arimo: "Arimo", sans-serif;
     --font-prompt: "Prompt", sans-serif;
@@ -37,6 +41,9 @@ ${variables};
         border:0;
         outline: none;
       cursor: pointer;
+    }
+    img{
+      max-width:100%;
     }
     ul{
       list-style:none;

@@ -245,4 +245,21 @@ module.exports = {
       icon: american,
     },
   ],
+  policies: [
+    {
+      id: 1,
+      text: "Free Shipping & Returns",
+      icon: "far fa-truck-moving",
+    },
+    {
+      id: 2,
+      text: "Lowest Price Guarantee",
+      icon: "far fa-medal",
+    },
+    {
+      id: 3,
+      text: "Longest Warranties Offer",
+      icon: "far fa-trophy-alt",
+    },
+  ],
 };
