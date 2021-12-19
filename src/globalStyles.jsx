@@ -33,7 +33,7 @@ ${variables};
     }
     body{
       font-family:var(--font-prompt);
-      overflow-x: hidden;
+      /* overflow-x: hidden; */
     }
     button,
     input,

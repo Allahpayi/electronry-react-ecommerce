@@ -1,11 +1,3 @@
-const visa = require("./assets/images/bank/visa.png");
-const paypal = require("./assets/images/bank/paypal.png");
-const western = require("./assets/images/bank/western.png");
-const master = require("./assets/images/bank/master.png");
-const discover = require("./assets/images/bank/discover.png");
-const circus = require("./assets/images/bank/circus.png");
-const american = require("./assets/images/bank/american.png");
-
 module.exports = {
   navLinks: [
     {
@@ -196,53 +188,91 @@ module.exports = {
     { name: "Blog", icon: "", link: "/" },
   ],
   brands: [
-    { name: " Anna", icon: "", link: "/" },
     {
+      id: "1",
+      name: " Anna",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-4.jpg",
+    },
+    {
+      id: "2",
       name: "Benjamin Button",
       icon: "",
       link: "/",
+      img: "/assets/images/brands/brand-2.jpg",
     },
-    { name: "Burberry", icon: "", link: "/" },
-    { name: "Carhart", icon: "", link: "/" },
-    { name: "Chanel", icon: "", link: "/" },
-    { name: "Coco Lee", icon: "", link: "/" },
-    { name: "Collette", icon: "", link: "/" },
+    {
+      id: "3",
+      name: "Burberry",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-1.jpg",
+    },
+    {
+      id: "4",
+      name: "Carhart",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-3.jpg",
+    },
+    {
+      id: "5",
+      name: "Chanel",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-1.jpg",
+    },
+    {
+      id: "6",
+      name: "Coco Lee",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-4.jpg",
+    },
+    {
+      id: "7",
+      name: "Collette",
+      icon: "",
+      link: "/",
+      img: "/assets/images/brands/brand-1.jpg",
+    },
   ],
   paymentMethods: [
     {
       id: 1,
       name: "Visa",
-      icon: visa,
+      icon: "/assets/images/bank/visa.png",
     },
     {
       id: 2,
       name: "PayPal",
-      icon: paypal,
+      icon: "/assets/images/bank/paypal.png",
     },
     {
       id: 3,
       name: "Western",
-      icon: western,
+      icon: "/assets/images/bank/western.png",
     },
     {
       id: 4,
       name: "Master",
-      icon: master,
+      icon: "/assets/images/bank/master.png",
     },
     {
       id: 5,
       name: "Discover",
-      icon: discover,
+      icon: "/assets/images/bank/discover.png",
     },
     {
       id: 6,
       name: "Circus",
-      icon: circus,
+      icon: "/assets/images/bank/circus.png",
     },
     {
       id: 7,
       name: "American",
-      icon: american,
+      icon: "/assets/images/bank/american.png",
     },
   ],
   policies: [

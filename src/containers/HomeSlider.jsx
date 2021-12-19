@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation } from "swiper";
 import "swiper/css/navigation";
-const sliderImg = require("../assets/images/slider-1.jpg");
 
 const SliderImg = styled.img`
   width: 100%;
@@ -82,7 +81,7 @@ const HomeSlider = () => {
       <PrevIcon className="swiper-button-prev"></PrevIcon>
       <NextIcon className="swiper-button-next"></NextIcon>
       <SwiperSlide>
-        <SliderImg src={sliderImg} alt="Slider Img" />
+        <SliderImg src="/assets/images/slider-1.jpg" alt="Slider Img" />
         <SliderContent>
           <SliderTitle>
             <span>Huge Saving</span> on <br /> UHD Televisions
@@ -92,7 +91,7 @@ const HomeSlider = () => {
         </SliderContent>
       </SwiperSlide>
       <SwiperSlide>
-        <SliderImg src={sliderImg} alt="Slider Img" />
+        <SliderImg src="/assets/images/slider-1.jpg" alt="Slider Img" />
         <SliderContent>
           <SliderTitle>
             <span>Sale off 75%</span> on <br /> UHD Televisions
@@ -102,7 +101,7 @@ const HomeSlider = () => {
         </SliderContent>
       </SwiperSlide>
       <SwiperSlide>
-        <SliderImg src={sliderImg} alt="Slider Img" />
+        <SliderImg src="/assets/images/slider-1.jpg" alt="Slider Img" />
         <SliderContent>
           <SliderTitle>
             <span>Huge Saving</span> on <br /> UHD Televisions

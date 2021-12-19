@@ -1,0 +1,1478 @@
+[
+    {
+        "id": 1,
+        "categoryName": "accessories",
+        "name": "Permi Unde Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-1.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 49,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": true,
+        "discount": true,
+        "discountRate": 20,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 2,
+        "categoryName": "Phones",
+        "name": "Are The Coped Permi Unde Ona - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-9.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 270,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 30,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 3,
+        "categoryName": "Computers",
+        "name": "Hentum Tosmois De Laptop Hamo Dincidunts - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-20.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 573,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 25,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 4,
+        "categoryName": "Tablet",
+        "name": "Danterdum Pretium De Milancelos",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-5.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 140,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 5,
+        "categoryName": "Phone",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-6.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 500,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 6,
+        "categoryName": "Electronic",
+        "name": "Home Imperdiet Vellectus Eleifend Thiams - DarkOrange",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-15.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 60,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 7,
+        "categoryName": "Computers",
+        "name": "Lementum Laptop Cras Hamo Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-23.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 8,
+        "categoryName": "Tv",
+        "name": "Permi Unde Tele Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-34.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 9,
+        "categoryName": "Computers",
+        "name": "Laptops Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-21.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 10,
+        "categoryName": "Electronic",
+        "name": "Home Lementum De Cras Hamo Dincidunts - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-13.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 67,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 11,
+        "categoryName": "Computers",
+        "name": "Lementum Laptop Cras Hamo Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-26.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 400,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 12,
+        "categoryName": "Electronic",
+        "name": "Home Lementum De Cras Hamo Dincidunts - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-17.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 13,
+        "categoryName": "Tv",
+        "name": "Tele Lementum De Cras Hamo Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-35.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 14,
+        "categoryName": "Computers",
+        "name": "Hentum Tosmois De Laptop Hamo Dincidunts - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-25.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 15,
+        "categoryName": "Tablet",
+        "name": "Coped Permi Unde Ona - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-7.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": true,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 16,
+        "categoryName": "Electronic",
+        "name": "Hivamus Imperdiet Tele Vellectus Eleifend Thiams",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-33.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 17,
+        "categoryName": "tv",
+        "name": "Hivamus Imperdiet Tele Vellectus Eleifend Thiams",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-41.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 18,
+        "categoryName": "computers",
+        "name": "Laptop Unde Tele Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-31.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 19,
+        "categoryName": "tv",
+        "name": "Tele Lementum De Cras Hamo Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-36.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 20,
+        "categoryName": "tv",
+        "name": "Permi Unde Tele Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-39.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": true,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 21,
+        "categoryName": "Electronic",
+        "name": "Home Ementum De Cras Hamo Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-11.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 22,
+        "categoryName": "Electronic",
+        "name": "Home Imperdiet Vellectus Eleifend Thiams - DarkOrange",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-12.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 23,
+        "categoryName": "Electronic",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-16.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 24,
+        "categoryName": "Electronic",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-32.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 25,
+        "categoryName": "tv",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-38.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 26,
+        "categoryName": "Electronic",
+        "name": "Hermi Unde Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-18.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 27,
+        "categoryName": "Phone",
+        "name": "Kill Giother Nodels Coped Permi Unde Ona - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-8.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 28,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-24.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 29,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-22.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": true,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 30,
+        "categoryName": "tv",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-37.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 31,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-6.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 32,
+        "categoryName": "Tv",
+        "name": "Permi Unde Tele Ona Pharetras Praneu Homuir - Black",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-34.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 33,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-30.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 34,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-23.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 35,
+        "categoryName": "Electronic",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-19.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 36,
+        "categoryName": "Electronic",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-14.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 37,
+        "categoryName": "Phones",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": true,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 38,
+        "categoryName": "Phones",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 39,
+        "categoryName": "Computers",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-27.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": false,
+        "mostPopular": true,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 40,
+        "categoryName": "tv",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-40.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": true,
+        "topRated": false,
+        "mostPopular": false,
+        "new": false,
+        "discount": false,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    },
+    {
+        "id": 41,
+        "categoryName": "Electronic",
+        "name": "Home Tosmois de Cras Hamo Dincidunts",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati del cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est...",
+        "img": [
+            "/assets/images/products/product-10.jpg",
+            "/assets/images/products/product-2.jpg",
+            "/assets/images/products/product-3.jpg",
+            "/assets/images/products/product-4.jpg"
+        ],
+        "sku": "KJSU-58636",
+        "availability": 10,
+        "productType": "Electronic",
+        "price": 100,
+        "bestSelling": false,
+        "topRated": true,
+        "mostPopular": false,
+        "new": true,
+        "discount": true,
+        "discountRate": 10,
+        "raiting": 4,
+        "size": [
+            "xs",
+            "s",
+            "m",
+            "l",
+            "xl"
+        ],
+        "color": [
+            "black",
+            "beige",
+            "slategray",
+            "sandybrown"
+        ]
+    }
+]

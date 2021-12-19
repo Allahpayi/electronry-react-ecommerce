@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { currencyFormat } from "../utils/currency-format";
 
 const CardActions = styled.div`
   display: flex;
@@ -44,7 +45,6 @@ const CardHeader = styled.div`
     background-color: #333;
     opacity: 0;
     transition: all 0.3s ease;
-    
   }
 `;
 const ProductCard = styled.div`
@@ -99,10 +99,10 @@ const CardTitle = styled(Link)`
 `;
 const CardRaiting = styled.div`
   font-size: 0.9rem;
-  color: #ffe234;
 `;
-const RaitingSolid = styled.i``;
-const RaitingRegular = styled.i``;
+const RaitingIcon = styled.i`
+  color: ${(props) => (props.empty ? "var(--color-gray)" : "#ffe234")};
+`;
 const CardPrice = styled.div`
   display: flex;
   justify-content: center;
@@ -118,36 +118,46 @@ const CardMuted = styled.p`
 const CardBold = styled.p`
   font-weight: 500;
   font-size: 1.3rem;
-  color: var(--color-red);
+  color: ${(props) => (props.red ? "var(--color-red)" : "var(--color-gray)")};
 `;
-const Card = ({ img }) => {
+const Card = ({ product }) => {
   return (
     <ProductCard>
       <CardHeader>
-        <CardImg src={img} alt="" />
+        <CardImg src={product.img[0]} alt="" />
         <CardActions>
-          <CardIcon red className="far fa-heart"></CardIcon>
+          <CardIcon className="far fa-heart"></CardIcon>
           {/* <CardIcon red className="fas fa-heart"></CardIcon> */}
           <CardIcon className="fas fa-cart-plus"></CardIcon>
         </CardActions>
         <CardLabelGroup>
-          <CardLabel red>Sale</CardLabel>
-          <CardLabel green>New</CardLabel>
+          {product.discount ? <CardLabel red>Sale</CardLabel> : null}
+          {product.new ? <CardLabel green>New</CardLabel> : null}
         </CardLabelGroup>
       </CardHeader>
       <CardBody>
-        <CardSubTitle>Category Name</CardSubTitle>
-        <CardTitle>Home Tosmois de Cras...</CardTitle>
+        <CardSubTitle>{product.categoryName}</CardSubTitle>
+        <CardTitle to={`product/${product.id}`}>
+          {product.name.slice(0, 20) + "..."}
+        </CardTitle>
         <CardRaiting>
-          <RaitingSolid className="fas fa-star" />
-          <RaitingSolid className="fas fa-star" />
-          <RaitingSolid className="fas fa-star" />
-          <RaitingSolid className="fas fa-star" />
-          <RaitingRegular className="far fa-star" />
+          <RaitingIcon className="fas fa-star" />
+          <RaitingIcon className="fas fa-star" />
+          <RaitingIcon className="fas fa-star" />
+          <RaitingIcon className="fas fa-star" />
+          <RaitingIcon empty className="fas fa-star" />
         </CardRaiting>
         <CardPrice>
-          <CardMuted>$59.00</CardMuted>
-          <CardBold>$49.00</CardBold>
+          <CardMuted>
+            {product.discount ? currencyFormat(product.price) : ""}
+          </CardMuted>
+          <CardBold red={product.discount === true}>
+            {product.discount
+              ? currencyFormat(
+                  (product.price * (100 - product.discountRate)) / 100
+                )
+              : currencyFormat(product.price)}
+          </CardBold>
         </CardPrice>
       </CardBody>
     </ProductCard>

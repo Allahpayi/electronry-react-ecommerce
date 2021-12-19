@@ -49,7 +49,7 @@ const CardIcon = styled.i`
 
 const PolicyCard = ({ data }) => {
   return (
-    <Card>
+    <Card to="/">
       <CardIcon className={data.icon}></CardIcon>
       <CardText>{data.text}</CardText>
     </Card>

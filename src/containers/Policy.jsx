@@ -6,8 +6,8 @@ import { policies } from "../config";
 const Policy = () => {
   return (
     <Grid col={1} mdCol={3} lgCol={3}>
-      {policies.map((policy) => (
-        <PolicyCard data={policy} />
+      {policies.map((policy,index) => (
+        <PolicyCard key={index} data={policy} />
       ))}
     </Grid>
   );
