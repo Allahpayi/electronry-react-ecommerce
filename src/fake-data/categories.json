@@ -2,73 +2,73 @@
     {
         "id": 1,
         "name": "Mobile Phones",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/phone.jpg"
     },
     {
         "id": 2,
         "name": "Laptops & Tablets",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/laptop.jpg"
     },
     {
         "id": 3,
         "name": "Televisions",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/tv.jpg"
     },
     {
         "id": 4,
         "name": "PCs & Accessories",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/pc.jpg"
     },
     {
         "id": 5,
         "name": "Audio & Video",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/audio.jpg"
     },
     {
         "id": 6,
         "name": "Gaming",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/game.jpg"
     },
     {
         "id": 7,
         "name": "Home Appliances",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/fridge.jpg"
     },
     {
         "id": 8,
         "name": "Kitchen Appliances",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/microwave.jpg"
     },
     {
         "id": 9,
         "name": "Cameras",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/camera.jpg"
     },
     {
         "id": 10,
         "name": "Consumables",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/kettle.jpg"
     },
     {
         "id": 11,
         "name": "Smart Homes",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/smart.jpg"
     },
     {
         "id": 12,
         "name": "Accessories",
-        "slug": "mobile",
+        "url": "/products/categoryName",
         "img": "/assets/images/categories/headphone.jpg"
     }
 ]

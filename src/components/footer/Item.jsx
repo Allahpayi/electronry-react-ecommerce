@@ -29,9 +29,9 @@ const Item = ({ children, title, list }) => {
     <ItemContainer>
       <Title>{title}</Title>
       <List>
-        {list.map((item,index) => (
+        {list.map((item, index) => (
           <ListItem key={index}>
-            <ListItemLink to="/">
+            <ListItemLink to={item.url}>
               <Icon
                 className={item.icon ? item.icon : "fal fa-chevron-right"}
               ></Icon>

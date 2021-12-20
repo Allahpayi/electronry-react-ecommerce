@@ -6,7 +6,7 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(${(props) => props.lgCol}, 1fr);
   gap: ${(props) => props.gap}px;
   margin: ${(props) => props.gap}px
-    ${(props) => (props.margin ? props.margin +'px' : '0px')};
+    ${(props) => (props.margin ? props.margin + "px" : "0px")};
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -19,7 +19,7 @@ const GridContainer = styled.div`
   }
 `;
 
-const Grid = ({ children, col, mdCol, lgCol, gap, scroll,margin }) => {
+const Grid = ({ children, col, mdCol, lgCol, gap, scroll, margin }) => {
   return (
     <GridContainer
       scroll={scroll}

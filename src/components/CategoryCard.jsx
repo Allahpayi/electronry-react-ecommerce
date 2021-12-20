@@ -12,16 +12,16 @@ const CardContainer = styled(Link)`
 const CardImage = styled.img`
   object-fit: cover;
 `;
-const CardLink = styled.p`
+const CardTitle = styled.p`
   display: block;
   color: var(--color-gray);
 `;
 
 const CategoryCard = ({ category }) => {
   return (
-    <CardContainer to={category.slug}>
+    <CardContainer to={category.url}>
       <CardImage src={category.img} />
-      <CardLink to={category.slug}>{category.name}</CardLink>
+      <CardTitle>{category.name}</CardTitle>
     </CardContainer>
   );
 };

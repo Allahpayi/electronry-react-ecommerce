@@ -5,7 +5,9 @@ import Item from "../components/footer/Item";
 import SignUp from "../components/footer/SignUp";
 import SosialIcons from "../components/footer/SosialIcons";
 import Grid from "../components/Grid";
-import { brands, categories, contactInfo, furtherInfo } from "../config";
+import { brands, contactInfo, furtherInfo } from "../config";
+import categories from "../fake-data/categories";
+
 const FooterContainer = styled.footer`
   padding: 4rem;
   background-color: var(--color-main2);
@@ -14,12 +16,13 @@ const FooterContainer = styled.footer`
   }
 `;
 const Footer = () => {
+  const sliceCategories = categories.slice(0,8)
   return (
     <>
       <FooterContainer>
         <SignUp />
         <Grid col={1} mdCol={2} lgCol={4} gap={20}>
-          <Item title="categories" list={categories} />
+          <Item title="categories" list={sliceCategories} />
           <Item title="Top Brands" list={brands} />
           <Item title="Further Info." list={furtherInfo} />
           <Item title="Contact Info." list={contactInfo}>

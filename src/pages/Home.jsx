@@ -10,7 +10,8 @@ import Grid from "../components/Grid";
 import categories from "../fake-data/categories";
 import CategoryCard from "../components/CategoryCard";
 import HomeSubBanner from "../containers/HomeSubBanner";
-import Brands from '../containers/Brands';
+import Brands from "../containers/Brands";
+import HomeAbout from "../containers/HomeAbout";
 
 const BannerMiddle = styled.img`
   display: none;
@@ -25,26 +26,26 @@ const BannerMiddle = styled.img`
 const Home = () => {
   const discount = allProducts
     .filter((product) => product.discount)
-    .slice(0, 5);
+    .slice(0, 6);
   const newProduct = allProducts
     .filter((product) => product.new && !product.discount)
-    .slice(0, 5);
+    .slice(0, 6);
   const bestSelling = allProducts
     .filter((product) => product.bestSelling)
-    .slice(0, 5);
+    .slice(0, 6);
   const topRated = allProducts
     .filter((product) => product.topRated)
-    .slice(0, 5);
+    .slice(0, 6);
   const mostPopular = allProducts
     .filter((product) => product.mostPopular)
-    .slice(0, 5);
+    .slice(0, 6);
   return (
     <>
       <HomeSlider />
       <Policy />
       <HomeBanner />
       <Section red title="flash deals" link={true}>
-        <Grid col={1} mdCol={3} lgCol={5} gap={20}>
+        <Grid col={2} mdCol={3} lgCol={6} gap={20}>
           {discount.map((product) => (
             <Card key={product.id} product={product} />
           ))}
@@ -60,19 +61,15 @@ const Home = () => {
         </Grid>
       </Section>
       <Section title="What's New" link={true}>
-        <Grid col={1} mdCol={3} lgCol={5} gap={20}>
+        <Grid col={2} mdCol={3} lgCol={6} gap={20}>
           {newProduct.map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
       </Section>
-      <HomeSubBanner
-        img={[
-          "/assets/images/banner-appliances.jpg",
-        ]}
-      />
+      <HomeSubBanner img={["/assets/images/banner-appliances.jpg"]} />
       <Section title="Top Rated" link={true}>
-        <Grid col={1} mdCol={3} lgCol={5} gap={20}>
+        <Grid col={2} mdCol={3} lgCol={6} gap={20}>
           {topRated.map((product) => (
             <Card key={product.id} product={product} />
           ))}
@@ -85,20 +82,21 @@ const Home = () => {
         ]}
       />
       <Section title="Best Selling" link={true}>
-        <Grid col={1} mdCol={3} lgCol={5} gap={20}>
+        <Grid col={2} mdCol={3} lgCol={6} gap={20}>
           {bestSelling.map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
       </Section>
-      <Brands/>
+      <Brands />
       <Section title="Most Popular" link={true}>
-        <Grid col={1} mdCol={3} lgCol={5} gap={20}>
+        <Grid col={2} mdCol={3} lgCol={6} gap={20}>
           {mostPopular.map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
       </Section>
+      <HomeAbout />
     </>
   );
 };
