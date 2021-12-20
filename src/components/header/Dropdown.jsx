@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { categories } from "../../config";
-
+import categories from '../../fake-data/categories';
 const DropdownMenu = styled.ul`
   position: absolute;
   z-index: 99;

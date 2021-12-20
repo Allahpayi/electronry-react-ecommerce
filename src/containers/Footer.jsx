@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
   }
 `;
 const Footer = () => {
-  const sliceCategories = categories.slice(0,8)
+  const sliceCategories = categories.slice(0,7)
   return (
     <>
       <FooterContainer>
