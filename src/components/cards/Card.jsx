@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { currencyFormat } from '../../utils/currency-format';
+import { currencyFormat } from "../../utils/currency-format";
 
 const CardActions = styled.div`
   display: flex;
@@ -121,6 +121,7 @@ const CardBold = styled.p`
   color: ${(props) => (props.red ? "var(--color-red)" : "var(--color-gray)")};
 `;
 const Card = ({ product }) => {
+
   return (
     <ProductCard>
       <CardHeader>
@@ -128,7 +129,9 @@ const Card = ({ product }) => {
         <CardActions>
           <CardIcon className="far fa-heart"></CardIcon>
           {/* <CardIcon red className="fas fa-heart"></CardIcon> */}
-          <CardIcon className="fas fa-cart-plus"></CardIcon>
+          <CardIcon
+            className="fas fa-cart-plus"
+          ></CardIcon>
         </CardActions>
         <CardLabelGroup>
           {product.discount ? <CardLabel red>Sale</CardLabel> : null}

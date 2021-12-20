@@ -72,12 +72,12 @@ const Logo = styled(Link)`
 const HeaderIconGroup = styled.div`
   display: flex;
   align-items: center;
-  & * {
+  /* & * {
     margin-right: 1rem;
     &:last-of-type {
       margin-right: 0;
     }
-  }
+  } */
 `;
 
 const Header = () => {

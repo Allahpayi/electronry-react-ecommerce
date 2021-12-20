@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const SideNavContainer = styled.div``;
+const SideNavContainer = styled.div`
+  padding-right: 1rem;
+`;
 
 const SideNavButton = styled.button`
   position: relative;
@@ -69,7 +71,8 @@ const SideNavContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
+  padding-bottom: .4rem;
   border-bottom: 1px solid var(--border-color);
 `;
 const SideNavTitle = styled.h2``;
@@ -81,6 +84,7 @@ const CloseIcon = styled.i`
   font-size: 1.6rem;
   color: var(--color-black);
 `;
+
 const SideNav = ({ children, icon, title, count }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
