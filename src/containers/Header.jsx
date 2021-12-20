@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Cart from "../components/header/Cart";
+import SideCart from "../components/header/SideCart";
 import Navbar from "../components/header/Navbar";
-import SignIn from "../components/header/SignIn";
-import WishList from "../components/header/WishList";
 
 const HeaderContainer = styled.div`
   background-color: var(--color-main);
@@ -72,14 +70,13 @@ const Logo = styled(Link)`
 const HeaderIconGroup = styled.div`
   display: flex;
   align-items: center;
-  /* & * {
-    margin-right: 1rem;
-    &:last-of-type {
-      margin-right: 0;
-    }
-  } */
 `;
-
+const Icon = styled(Link)`
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-right: 1rem;
+  color: var(--color-black);
+`;
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openNavbar = () => {
@@ -97,9 +94,9 @@ const Header = () => {
         </Logo>
         <NavbarMenu toggle={[isOpen, setIsOpen]} />
         <HeaderIconGroup>
-          <SignIn />
-          <WishList />
-          <Cart />
+          <Icon to="/login" className="fal fa-user-alt"></Icon>
+          <Icon to="/favorities" className="far fa-heart"></Icon>
+          <SideCart />
         </HeaderIconGroup>
       </HeaderBottom>
     </HeaderContainer>
