@@ -5,7 +5,7 @@ import Cart from "../components/header/Cart";
 import Navbar from "../components/header/Navbar";
 import SignIn from "../components/header/SignIn";
 import WishList from "../components/header/WishList";
-import SideNavButton from "../components/buttons/SideNavButton";
+import IconButton from "../components/buttons/IconButton";
 
 const HeaderContainer = styled.div`
   background-color: var(--color-main);
@@ -111,12 +111,22 @@ const Header = () => {
         </Logo>
         <NavbarMenu toggle={[isOpen, setIsOpen]} />
         <HeaderIconGroup>
-          <SideNavButton toggleModal = {openSignIn} icon="fal fa-user-alt"></SideNavButton>
-          <SideNavButton toggleModal = {openWishList} icon="far fa-heart"></SideNavButton>
-          <SideNavButton toggleModal = {openCart} icon="fas fa-cart-plus" count="0"></SideNavButton>
-          {cartIsOpen && <Cart />}
-          {wishIsOpen && <WishList />}
-          {signInIsOpen && <SignIn />}
+          <IconButton
+            toggleModal={openSignIn}
+            icon="fal fa-user-alt"
+          ></IconButton>
+          <IconButton
+            toggleModal={openWishList}
+            icon="far fa-heart"
+          ></IconButton>
+          <IconButton
+            toggleModal={openCart}
+            icon="fas fa-cart-plus"
+            count="0"
+          ></IconButton>
+          {cartIsOpen && <Cart toggleModal={openCart} />}
+          {wishIsOpen && <WishList toggleModal={openWishList} />}
+          {signInIsOpen && <SignIn toggleModal={openSignIn} />}
         </HeaderIconGroup>
       </HeaderBottom>
     </HeaderContainer>

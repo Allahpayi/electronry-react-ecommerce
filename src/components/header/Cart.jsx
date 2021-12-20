@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { currencyFormat } from "../../utils/currency-format";
 import Modal from "../Modal";
+import IconButton from "../buttons/IconButton";
+import { currencyFormat } from "../../utils/currency-format";
+
 const Item = styled.div`
   display: flex;
   justify-content: space-between;
@@ -52,15 +54,9 @@ const ItemQuantity = styled.input`
   border: 1px solid var(--border-color);
 `;
 
-const ItemDelete = styled.i`
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: var(--color-black);
-`;
-
-const Cart = () => {
+const Cart = ({ toggleModal }) => {
   return (
-    <Modal title="My Cart">
+    <Modal toggleModal={toggleModal} title="My Cart">
       <Item>
         <ItemImg src="/assets/images/products/product-4.jpg" />
         <ItemGroup column>
@@ -70,9 +66,9 @@ const Cart = () => {
             <ItemMuted>Black</ItemMuted>
           </ItemGroup>
           <ItemPrice>{currencyFormat(140)}</ItemPrice>
-          <ItemQuantity type="number" value="1"></ItemQuantity>
+          <ItemQuantity type="number" defaultValue="1"></ItemQuantity>
         </ItemGroup>
-        <ItemDelete className="fa fa-times"></ItemDelete>
+        <IconButton icon="fa fa-times"></IconButton>
       </Item>
       <Item>
         <ItemImg src="/assets/images/products/product-4.jpg" />
@@ -83,9 +79,9 @@ const Cart = () => {
             <ItemMuted>Black</ItemMuted>
           </ItemGroup>
           <ItemPrice>{currencyFormat(140)}</ItemPrice>
-          <ItemQuantity type="number" value="1"></ItemQuantity>
+          <ItemQuantity type="number" defaultValue="1"></ItemQuantity>
         </ItemGroup>
-        <ItemDelete className="fas fa-times"></ItemDelete>
+        <IconButton icon="fas fa-times"></IconButton>
       </Item>
     </Modal>
   );

@@ -23,7 +23,7 @@ const CartCount = styled.span`
   color: var(--color-main);
   background-color: var(--color-red);
 `;
-const CartButton = ({ icon, count, toggleModal }) => {
+const IconButton = ({ icon, count, toggleModal }) => {
   return (
     <Button onClick={toggleModal}>
       <Icon className={icon}></Icon>
@@ -32,4 +32,4 @@ const CartButton = ({ icon, count, toggleModal }) => {
   );
 };
 
-export default CartButton;
+export default IconButton;

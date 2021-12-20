@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import ReactDom from "react-dom";
 import styled from "styled-components";
-import SideNavButton from "./buttons/SideNavButton";
+import IconButton from "./buttons/IconButton";
 
 const BackdropContainer = styled.div`
   position: fixed;
@@ -33,19 +33,22 @@ const ModalHeader = styled.div`
   padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border-color);
 `;
-const SideNavTitle = styled.h2`
+const ModalTitle = styled.h2`
   color: var(--color-black);
 `;
-const Backdrop = (props) => {
-  return <BackdropContainer></BackdropContainer>;
+const Backdrop = ({toggleModal}) => {
+  return <BackdropContainer onClick={toggleModal}></BackdropContainer>;
 };
-const ModalOverlay = ({ children, left, title }) => {
+const ModalOverlay = ({ children, left, title, toggleModal }) => {
   return (
     <>
       <ModalContent left={left}>
         <ModalHeader>
-          <SideNavTitle>{title}</SideNavTitle>
-          <SideNavButton icon="fas fa-times"></SideNavButton>
+          <ModalTitle>{title}</ModalTitle>
+          <IconButton
+            toggleModal={toggleModal}
+            icon="fas fa-times"
+          ></IconButton>
         </ModalHeader>
         {children}
       </ModalContent>
@@ -53,12 +56,12 @@ const ModalOverlay = ({ children, left, title }) => {
   );
 };
 const sideNav = document.getElementById("side-nav");
-const Modal = ({ children, left, title }) => {
+const Modal = ({ children, left, title, toggleModal }) => {
   return (
     <Fragment>
-      {ReactDom.createPortal(<Backdrop />, sideNav)}
+      {ReactDom.createPortal(<Backdrop toggleModal={toggleModal} />, sideNav)}
       {ReactDom.createPortal(
-        <ModalOverlay left={left} title={title}>
+        <ModalOverlay left={left} title={title} toggleModal={toggleModal}>
           {children}
         </ModalOverlay>,
         sideNav
