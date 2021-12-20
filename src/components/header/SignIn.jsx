@@ -1,8 +1,12 @@
 import React from "react";
-import Modal from "../Modal";
+import SideNav from "./SideNav";
 
-const SignIn = ({toggleModal}) => {
-  return <Modal toggleModal={toggleModal} title="CUSTOMER LOGIN">CUSTOMER LOGIN</Modal>;
+const SignIn = () => {
+  return (
+    <SideNav icon="fal fa-user-alt" title="CUSTOMER LOGIN" text="Sign In">
+      User
+    </SideNav>
+  );
 };
 
 export default SignIn;

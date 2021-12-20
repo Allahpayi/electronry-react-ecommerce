@@ -5,7 +5,6 @@ import Cart from "../components/header/Cart";
 import Navbar from "../components/header/Navbar";
 import SignIn from "../components/header/SignIn";
 import WishList from "../components/header/WishList";
-import IconButton from "../components/buttons/IconButton";
 
 const HeaderContainer = styled.div`
   background-color: var(--color-main);
@@ -73,31 +72,18 @@ const Logo = styled(Link)`
 const HeaderIconGroup = styled.div`
   display: flex;
   align-items: center;
-  & > * {
+  /* & * {
     margin-right: 1rem;
-  }
-  & > *:last-of-type {
-    margin-right: 0;
-  }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  } */
 `;
 
 const Header = () => {
-  const [cartIsOpen, setCartIsOpen] = useState(false);
-  const [wishIsOpen, setWishIsOpen] = useState(false);
-  const [signInIsOpen, setSignInIsOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const openNavbar = () => {
     setIsOpen(true);
-  };
-
-  const openCart = () => {
-    setCartIsOpen(!cartIsOpen);
-  };
-  const openWishList = () => {
-    setWishIsOpen(!wishIsOpen);
-  };
-  const openSignIn = () => {
-    setSignInIsOpen(!signInIsOpen);
   };
   return (
     <HeaderContainer>
@@ -111,22 +97,9 @@ const Header = () => {
         </Logo>
         <NavbarMenu toggle={[isOpen, setIsOpen]} />
         <HeaderIconGroup>
-          <IconButton
-            toggleModal={openSignIn}
-            icon="fal fa-user-alt"
-          ></IconButton>
-          <IconButton
-            toggleModal={openWishList}
-            icon="far fa-heart"
-          ></IconButton>
-          <IconButton
-            toggleModal={openCart}
-            icon="fas fa-cart-plus"
-            count="0"
-          ></IconButton>
-          {cartIsOpen && <Cart toggleModal={openCart} />}
-          {wishIsOpen && <WishList toggleModal={openWishList} />}
-          {signInIsOpen && <SignIn toggleModal={openSignIn} />}
+          <SignIn />
+          <WishList />
+          <Cart />
         </HeaderIconGroup>
       </HeaderBottom>
     </HeaderContainer>

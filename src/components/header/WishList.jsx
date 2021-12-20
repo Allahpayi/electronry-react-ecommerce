@@ -1,8 +1,12 @@
 import React from "react";
-import Modal from "../Modal";
+import SideNav from "./SideNav";
 
-const WishList = ({toggleModal}) => {
-  return <Modal toggleModal={toggleModal} title="Wish List">CUSTOMER LOGIN</Modal>;
+const WishList = () => {
+  return (
+    <SideNav icon="far fa-heart" title="Wish List" text="Wish list">
+      Wish List
+    </SideNav>
+  );
 };
 
 export default WishList;

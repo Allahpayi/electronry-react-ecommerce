@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Modal from "../Modal";
-import IconButton from "../buttons/IconButton";
+import SideNav from "./SideNav";
 import { currencyFormat } from "../../utils/currency-format";
-
 const Item = styled.div`
   display: flex;
   justify-content: space-between;
@@ -54,9 +52,18 @@ const ItemQuantity = styled.input`
   border: 1px solid var(--border-color);
 `;
 
-const Cart = ({ toggleModal }) => {
+const ItemDelete = styled.i`
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  color: var(--color-black);
+`;
+
+const Cart = () => {
   return (
-    <Modal toggleModal={toggleModal} title="My Cart">
+    <SideNav icon="fal fa-shopping-cart" title="Your Bag" text="cart" count={0}>
       <Item>
         <ItemImg src="/assets/images/products/product-4.jpg" />
         <ItemGroup column>
@@ -66,9 +73,9 @@ const Cart = ({ toggleModal }) => {
             <ItemMuted>Black</ItemMuted>
           </ItemGroup>
           <ItemPrice>{currencyFormat(140)}</ItemPrice>
-          <ItemQuantity type="number" defaultValue="1"></ItemQuantity>
+          <ItemQuantity type="number" value="1"></ItemQuantity>
         </ItemGroup>
-        <IconButton icon="fa fa-times"></IconButton>
+        <ItemDelete className="fa fa-times"></ItemDelete>
       </Item>
       <Item>
         <ItemImg src="/assets/images/products/product-4.jpg" />
@@ -79,11 +86,11 @@ const Cart = ({ toggleModal }) => {
             <ItemMuted>Black</ItemMuted>
           </ItemGroup>
           <ItemPrice>{currencyFormat(140)}</ItemPrice>
-          <ItemQuantity type="number" defaultValue="1"></ItemQuantity>
+          <ItemQuantity type="number" value="1"></ItemQuantity>
         </ItemGroup>
-        <IconButton icon="fas fa-times"></IconButton>
+        <ItemDelete className="fa fa-times"></ItemDelete>
       </Item>
-    </Modal>
+    </SideNav>
   );
 };
 
