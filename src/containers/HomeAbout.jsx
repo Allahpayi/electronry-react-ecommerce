@@ -55,7 +55,7 @@ const HomeAbout = () => {
       </Title>
       <Grid col={1} mdCol={2} lgCol={4} gap={20}>
         {aboutUs.map((item) => (
-          <AboutCard>
+          <AboutCard key={item.id}>
             <CardImg src={item.img} />
             <CardTitle>{item.name}</CardTitle>
             <CardText>{item.description}</CardText>

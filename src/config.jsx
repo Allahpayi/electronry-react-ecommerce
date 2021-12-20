@@ -92,62 +92,7 @@ module.exports = {
       url: "/contact",
     },
   ],
-  categories: [
-    {
-      name: "Accessories & Supplies",
-      categoryId: 1,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Camera & Photo",
-      categoryId: 2,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Car & Vehicle Electronics",
-      categoryId: 3,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Cell Phones & Accessories",
-      categoryId: 4,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Computers & Accessories",
-      categoryId: 5,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "GPS & Navigation",
-      categoryId: 6,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Headphones",
-      categoryId: 7,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Home Audio",
-      categoryId: 8,
-      icon: "",
-      url: "/women",
-    },
-    {
-      name: "Office Electronics",
-      categoryId: 9,
-      icon: "",
-      url: "/women",
-    },
-  ],
+
   contactInfo: [
     {
       name: "685 Market Street",

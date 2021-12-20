@@ -3,19 +3,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { navLinks } from "../../config";
-import Dropdown from "./Dropdown";
 
-const DropdownMenu = styled(Dropdown)`
-  transform: translateY(2rem);
-  transition: all 0.3s ease;
-  opacity: 0;
-  user-select: none;
-  visibility: hidden;
-  @media (max-width: 762px) {
-    transform: translateY(0rem);
-    transform: translateX(-25rem);
-  }
-`;
 const Nav = styled.ul``;
 const NavClose = styled.i`
   display: none;
@@ -28,7 +16,7 @@ const NavClose = styled.i`
     font-size: 2rem;
   }
 `;
-const MobileOverlay = styled.div`
+const Overlay = styled.div`
   @media (max-width: 762px) {
     position: fixed;
     z-index: 98;
@@ -44,7 +32,7 @@ const MobileOverlay = styled.div`
   }
 `;
 
-const MobileNavContent = styled.div`
+const NavContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,12 +57,12 @@ const MobileNavContent = styled.div`
 
 const MobileNavbar = styled.div`
   &.active {
-    & ${MobileOverlay} {
+    & ${Overlay} {
       opacity: 1;
       user-select: auto;
       visibility: visible;
     }
-    & ${MobileNavContent} {
+    & ${NavContent} {
       transform: translateX(0rem);
     }
   }
@@ -104,12 +92,10 @@ const NavLink = styled(Link)`
     }
   }
 `;
-const ArrowIcon = styled.i``;
-
 const NavItem = styled.li`
   position: relative;
   padding: 1rem 0;
-  margin-right: 1.8rem;
+  margin-right: 1rem;
   text-transform: capitalize;
   &:last-of-type {
     margin-right: 0rem;
@@ -119,7 +105,6 @@ const NavItem = styled.li`
     border-bottom: 1px solid var(--border-color);
     width: 100%;
   }
-
   @media (min-width: 762px) {
     &.active ${NavLink} {
       &::after {
@@ -132,33 +117,6 @@ const NavItem = styled.li`
         transition: all 0.4s ease;
       }
     }
-    &:hover ${ArrowIcon} {
-      transform: rotate(180deg);
-    }
-  }
-  & ${ArrowIcon} {
-    margin-left: 0.3rem;
-    font-size: 0.8rem;
-    transition: all 0.4s ease;
-  }
-
-  &:hover ${DropdownMenu} {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transform: translateX(0rem);
-  }
-  @media (max-width: 762px) {
-    & ${ArrowIcon} {
-      font-size: 1.2rem;
-      transform: rotate(-90deg);
-    }
-    &:hover ${DropdownMenu} {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      transform: translateX(0rem);
-    }
   }
 `;
 const Navbar = ({ toggle, className }) => {
@@ -170,30 +128,18 @@ const Navbar = ({ toggle, className }) => {
   return (
     <Nav className={className}>
       <MobileNavbar className={isOpen ? "active" : ""}>
-        <MobileOverlay onClick={closeNav}></MobileOverlay>
-        <MobileNavContent>
+        <Overlay onClick={closeNav}></Overlay>
+        <NavContent>
           <NavClose onClick={closeNav} className="fas fa-times"></NavClose>
           {navLinks.map((navItem, index) => (
             <NavItem
               className={`${location.pathname === navItem.url ? "active" : ""}`}
               key={index}
             >
-              <NavLink to={navItem.children.length > 0 ? "#" : navItem.url}>
-                {navItem.name}
-                {navItem.icon ? (
-                  <ArrowIcon className="far fa-chevron-down"></ArrowIcon>
-                ) : (
-                  navItem.icon
-                )}
-              </NavLink>
-              {navItem.children.length > 0 ? (
-                <DropdownMenu categoryName={navItem.name} />
-              ) : (
-                ""
-              )}
+              <NavLink to={navItem.url}>{navItem.name}</NavLink>
             </NavItem>
           ))}
-        </MobileNavContent>
+        </NavContent>
       </MobileNavbar>
     </Nav>
   );
