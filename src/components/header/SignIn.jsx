@@ -1,12 +1,8 @@
 import React from "react";
-import SideNav from "./SideNav";
+import Modal from "../Modal";
 
 const SignIn = () => {
-  return (
-    <SideNav icon="fal fa-user-alt" title="CUSTOMER LOGIN" text="Sign In">
-      User
-    </SideNav>
-  );
+  return <Modal title="CUSTOMER LOGIN">CUSTOMER LOGIN</Modal>;
 };
 
 export default SignIn;

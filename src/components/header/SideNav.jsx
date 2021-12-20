@@ -5,30 +5,6 @@ const SideNavContainer = styled.div`
   padding-right: 1rem;
 `;
 
-const SideNavButton = styled.button`
-  position: relative;
-  background-color: unset;
-  cursor: pointer;
-`;
-const SideNavIcon = styled.i`
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: var(--color-black);
-`;
-
-const CartCount = styled.span`
-  display: inline-block;
-  position: absolute;
-  top: -0.6rem;
-  right: -0.6rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  line-height: 1.3rem;
-  text-align: center;
-  border-radius: 50%;
-  color: var(--color-main);
-  background-color: var(--color-red);
-`;
 const SideNavOverlay = styled.div`
   position: fixed;
   z-index: 98;
@@ -71,8 +47,8 @@ const SideNavContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: .4rem;
-  padding-bottom: .4rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid var(--border-color);
 `;
 const SideNavTitle = styled.h2``;
@@ -92,12 +68,7 @@ const SideNav = ({ children, icon, title, count }) => {
   };
   return (
     <SideNavContainer>
-      <SideNavButton onClick={toggle}>
-        <SideNavIcon className={icon}></SideNavIcon>
-        {count !== undefined ? <CartCount>{count}</CartCount> : ""}
-      </SideNavButton>
       <SideNavBody className={isOpen ? "active" : ""}>
-        <SideNavOverlay onClick={toggle}></SideNavOverlay>
         <SideNavContent>
           <SideNavContentHeader>
             <SideNavTitle>{title}</SideNavTitle>

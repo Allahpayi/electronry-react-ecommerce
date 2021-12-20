@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SideNav from "./SideNav";
 import { currencyFormat } from "../../utils/currency-format";
+import Modal from "../Modal";
 const Item = styled.div`
   display: flex;
   justify-content: space-between;
@@ -53,17 +53,14 @@ const ItemQuantity = styled.input`
 `;
 
 const ItemDelete = styled.i`
-  width: 1.8rem;
-  height: 1.8rem;
-  text-align: center;
-  line-height: 1.8rem;
   font-size: 1.6rem;
+  font-weight: 300;
   color: var(--color-black);
 `;
 
 const Cart = () => {
   return (
-    <SideNav icon="fal fa-shopping-cart" title="Your Bag" text="cart" count={0}>
+    <Modal title="My Cart">
       <Item>
         <ItemImg src="/assets/images/products/product-4.jpg" />
         <ItemGroup column>
@@ -88,9 +85,9 @@ const Cart = () => {
           <ItemPrice>{currencyFormat(140)}</ItemPrice>
           <ItemQuantity type="number" value="1"></ItemQuantity>
         </ItemGroup>
-        <ItemDelete className="fa fa-times"></ItemDelete>
+        <ItemDelete className="fas fa-times"></ItemDelete>
       </Item>
-    </SideNav>
+    </Modal>
   );
 };
 

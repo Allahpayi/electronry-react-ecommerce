@@ -1,12 +1,8 @@
 import React from "react";
-import SideNav from "./SideNav";
+import Modal from "../Modal";
 
 const WishList = () => {
-  return (
-    <SideNav icon="far fa-heart" title="Wish List" text="Wish list">
-      Wish List
-    </SideNav>
-  );
+  return <Modal title="Wish List">CUSTOMER LOGIN</Modal>;
 };
 
 export default WishList;
