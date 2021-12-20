@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { currencyFormat } from "../utils/currency-format";
+import { currencyFormat } from '../../utils/currency-format';
 
 const CardActions = styled.div`
   display: flex;
