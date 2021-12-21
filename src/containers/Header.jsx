@@ -3,16 +3,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import SideCart from "../components/header/SideCart";
 import Navbar from "../components/header/Navbar";
+import SideNavbar from "../components/header/SideNavbar";
 
 const HeaderContainer = styled.div`
   background-color: var(--color-main);
+  border-bottom: 1px solid var(--border-color);
 `;
-const NavbarMenu = styled(Navbar)`
-  position: absolute;
-  @media (min-width: 762px) {
-    position: static;
-  }
-`;
+
 const HeaderTop = styled.p`
   padding: 0.6rem 0;
   text-align: center;
@@ -44,7 +41,7 @@ const HeaderBottom = styled.div`
   align-items: center;
   padding: 0.4rem 1rem;
   @media (max-width: 762px) {
-    position: relative;
+    padding: 1rem;
   }
 `;
 const MenuBars = styled.i`
@@ -64,6 +61,9 @@ const Logo = styled(Link)`
   text-transform: uppercase;
   & span {
     color: var(--color-red);
+  }
+  @media (max-width: 762px) {
+    display: none;
   }
 `;
 
@@ -92,7 +92,8 @@ const Header = () => {
         <Logo to="/">
           E<span>R</span>
         </Logo>
-        <NavbarMenu toggle={[isOpen, setIsOpen]} />
+        <Navbar />
+        <SideNavbar toggle={[isOpen, setIsOpen]} />
         <HeaderIconGroup>
           <Icon to="/login" className="fal fa-user-alt"></Icon>
           <Icon to="/favorities" className="far fa-heart"></Icon>

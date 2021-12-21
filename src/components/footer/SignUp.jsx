@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../form-elements/Button";
+import Input from "../form-elements/Input";
 
 const Form = styled.form`
   width: max-content;
@@ -26,44 +28,14 @@ const Group = styled.div`
     flex-direction: column;
   }
 `;
-const Input = styled.input`
-  padding: 0.8rem 1.4rem;
-  margin-right: 1rem;
-  width: 100%;
-  border-radius: 0.2rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--color-main);
-  cursor: text;
-  @media (max-width: 762px) {
-    margin-bottom: .8rem;
-  }
-`;
-const Button = styled.button`
-  padding: 0.8rem 1.4rem;
-  border-radius: 0.2rem;
-  border: 1px solid var(--color-red);
-  font-weight: 600;
-  background-color: var(--color-red);
-  color: var(--color-main);
-  transition: all 0.3s ease;
-  &:hover {
-    color: var(--color-red);
-    background-color: transparent;
-  }
-  @media (max-width: 762px) {
-    width: max-content;
-    margin: auto;
-  }
-`;
-
 const SignUp = () => {
   return (
     <Form>
       <Title>SIGN UP FOR OUR NEWSLETTER</Title>
       <Text>Receive our latest updates about our products and promotions.</Text>
       <Group>
-        <Input type="text" placeholder="enter your email address" />
-        <Button>Submit</Button>
+        <Input block placeholder="enter your email address" />
+        <Button primary href="/">Submit</Button>
       </Group>
     </Form>
   );

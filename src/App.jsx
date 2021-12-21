@@ -12,7 +12,7 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/" exact>
+        <Route path="/cart">
           <Cart />
         </Route>
       </Switch>

@@ -59,10 +59,27 @@ const SliderButton = styled.button`
 `;
 const PrevIcon = styled.span`
   color: var(--color-main);
+
+  @media (max-width: 762px) {
+    top: 95%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    &::after {
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 const NextIcon = styled.span`
   color: var(--color-main);
+  @media (max-width: 762px) {
+    top: 95%;
+    right: 50%;
+    transform: translate(100%, -50%);
+    &::after {
+      font-size: 1.7rem;
+    }
+  }
 `;
 const HomeSlider = () => {
   return (

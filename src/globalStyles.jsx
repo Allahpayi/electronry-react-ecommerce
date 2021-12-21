@@ -33,6 +33,8 @@ ${variables};
     }
     body{
       font-family:var(--font-prompt);
+      color:var(--color-black);
+      overflow-x: hidden;
     }
     button,
     input,

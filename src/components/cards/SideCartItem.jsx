@@ -61,7 +61,7 @@ const SideCartItem = () => {
     <Item>
       <ItemImg src="/assets/images/products/product-4.jpg" />
       <Group column>
-        <ItemName>Home Tosmois de Cras Hamo Dincidunts</ItemName>
+        <ItemName to="/">Home Tosmois de Cras Hamo Dincidunts</ItemName>
         <Group>
           <ItemMuted>XS</ItemMuted>
           <ItemMuted>Black</ItemMuted>

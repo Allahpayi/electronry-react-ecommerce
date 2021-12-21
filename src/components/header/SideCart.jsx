@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { currencyFormat } from "../../utils/currency-format";
-import Button from "../buttons/Button";
+import Button from "../form-elements/Button";
 import SideCartItem from "../cards/SideCartItem";
 
 const CartButton = styled.button`
@@ -97,16 +98,36 @@ const CartFooter = styled.div`
 const Group = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
 `;
 const FooterText = styled.p``;
 const TotalPrice = styled.p`
   font-weight: 600;
   font-size: 1.3rem;
 `;
+const Terms = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+  color: var(--color-gray);
+`;
+const Checkbox = styled.input`
+  margin-right: 0.6rem;
+`;
+
+const TermsLink = styled(Link)`
+  margin-left: 0.2rem;
+  font-weight: 400;
+  text-decoration: underline;
+  color: var(--color-black);
+`;
 
 const SideCart = ({ children, icon, title, count }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTerms, setIsTerms] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -132,8 +153,13 @@ const SideCart = ({ children, icon, title, count }) => {
             <FooterText>Total</FooterText>
             <TotalPrice>{currencyFormat(130)}</TotalPrice>
           </Group>
+          <Terms>
+            <Checkbox defaultChecked={isTerms} onClick={()=>setIsTerms(!isTerms)} type="checkbox" />I
+            agree with the
+            <TermsLink to="/">Terms & conditions</TermsLink>
+          </Terms>
           <Group onClick={toggle}>
-            <Button red href="/checkout">
+            <Button disabled={!isTerms} red href="/checkout">
               Check Out
             </Button>
             <Button href="/cart">View Cart</Button>
