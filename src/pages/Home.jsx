@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Section from "../containers/Section";
 import HomeBanner from "../containers/HomeBanner";
 import HomeSlider from "../containers/HomeSlider";
 import Policy from "../containers/Policy";
-import allProducts from "../fake-data/products";
 import Card from "../components/cards/Card";
 import Grid from "../components/Grid";
-import categories from "../fake-data/categories";
 import CategoryCard from "../components/cards/CategoryCard";
 import HomeSubBanner from "../containers/HomeSubBanner";
 import Brands from "../containers/Brands";
 import HomeAbout from "../containers/HomeAbout";
+import { useSelector } from "react-redux";
 
 const BannerMiddle = styled.img`
   display: none;
@@ -24,21 +23,21 @@ const BannerMiddle = styled.img`
 `;
 
 const Home = () => {
-  const discount = allProducts
-    .filter((product) => product.discount)
-    .slice(0, 5);
-  const newProduct = allProducts
+  const products = useSelector((state) => state.allProducts.products);
+  const categories = useSelector((state) => state.allCategories.categories);
+
+  const discount = products.filter((product) => product.discount).slice(0, 5);
+  const newProduct = products
     .filter((product) => product.new && !product.discount)
     .slice(0, 5);
-  const bestSelling = allProducts
+  const bestSelling = products
     .filter((product) => product.bestSelling)
     .slice(0, 5);
-  const topRated = allProducts
-    .filter((product) => product.topRated)
-    .slice(0, 5);
-  const mostPopular = allProducts
+  const topRated = products.filter((product) => product.topRated).slice(0, 5);
+  const mostPopular = products
     .filter((product) => product.mostPopular)
     .slice(0, 5);
+
   return (
     <>
       <HomeSlider />

@@ -1,0 +1,6 @@
+export const ActionTypes = {
+  GET_PRODUCTS: "GET_PRODUCTS",
+  GET_CATEGORIES: "GET_CATEGORIES",
+
+  DISCOUNT:"DISCOUNT"
+};

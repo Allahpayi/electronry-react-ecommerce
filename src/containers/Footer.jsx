@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Copyright from "../components/footer/Copyright";
 import Item from "../components/footer/Item";
@@ -6,7 +7,7 @@ import SignUp from "../components/footer/SignUp";
 import SosialIcons from "../components/footer/SosialIcons";
 import Grid from "../components/Grid";
 import { brands, contactInfo, furtherInfo } from "../config";
-import categories from "../fake-data/categories";
+import data from "../fake-data/db";
 
 const FooterContainer = styled.footer`
   padding: 4rem;
@@ -16,6 +17,7 @@ const FooterContainer = styled.footer`
   }
 `;
 const Footer = () => {
+  const categories = useSelector((state) => state.allCategories.categories);
   const sliceCategories = categories.slice(0,7)
   return (
     <>
