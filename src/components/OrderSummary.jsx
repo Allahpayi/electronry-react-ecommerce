@@ -56,7 +56,7 @@ const TermsLink = styled(Link)`
   color: var(--color-black);
 `;
 
-const OrderSummary = () => {
+const OrderSummary = ({totalPrice}) => {
   const [isTerms, setIsTerms] = useState(false);
   const [collapse, setCollapse] = useState(true);
   return (
@@ -65,17 +65,17 @@ const OrderSummary = () => {
         <CartSummaryTitle>ORDER SUMMARY</CartSummaryTitle>
         <Group>
           <GroupText>Sub Total:</GroupText>
-          <GroupText>{currencyFormat(130)}</GroupText>
+          <GroupText>{currencyFormat(totalPrice)}</GroupText>
         </Group>
       </CartSummaryHeader>
       <Form>
         <FormTitle onClick={() => setCollapse(!collapse)}>
           Get Shipping Estimates
         </FormTitle>
-        <Select block data={["Azerbaijany", "Turkey", "United States"]} />
-        <Select block data={["Sabirabad", "Baku", "Shirvan"]} />
+        <Select padding block data={["Azerbaijany", "Turkey", "United States"]} />
+        <Select padding block data={["Sabirabad", "Baku", "Shirvan"]} />
         <Input block placeholder="ZIP Code" />
-        <Button href="/cart" radius block outlinePrimary>
+        <Button href="/cart" block outlinePrimary>
           Calculate Shipping
         </Button>
       </Form>
@@ -84,7 +84,7 @@ const OrderSummary = () => {
         <Input block />
         <Group>
           <GroupText>Total:</GroupText>
-          <GroupText>{currencyFormat(130)}</GroupText>
+          <GroupText>{currencyFormat(totalPrice)}</GroupText>
         </Group>
         <Terms>
           <Checkbox
@@ -95,10 +95,10 @@ const OrderSummary = () => {
           I agree with the
           <TermsLink to="/">Terms & conditions</TermsLink>
         </Terms>
-        <Button disabled={!isTerms} href="checkout" radius block primary>
+        <Button disabled={!isTerms} href="checkout" block primary>
           Proceed to Checkout
         </Button>
-        <Button href="/products" radius block outlinePrimary>
+        <Button href="/products" block outlinePrimary>
           Continue Shopping
         </Button>
       </Form>

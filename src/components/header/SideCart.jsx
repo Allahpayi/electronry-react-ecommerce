@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { currencyFormat } from "../../utils/currency-format";
 import Button from "../form-elements/Button";
 import SideCartItem from "../cards/SideCartItem";
+import { useSelector } from "react-redux";
 
 const CartButton = styled.button`
   position: relative;
@@ -56,7 +57,11 @@ const CartContent = styled.div`
   transition: transform 0.3s ease;
 `;
 const CartBody = styled.div``;
-
+const TextMuted = styled.p` 
+  margin: 1rem 0;
+  text-align: center;
+  color: var(--color-gray);
+`
 const Cart = styled.div`
   &.active {
     & ${CartBackdrop} {
@@ -127,35 +132,33 @@ const TermsLink = styled(Link)`
 const SideCart = ({ children, icon, title, count }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isTerms, setIsTerms] = useState(false);
-
+  const cart = useSelector((state) => state.cart);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-  return (
-    <Cart className={isOpen ? "active" : ""}>
-      <CartButton onClick={toggle}>
-        <BasketIcon className="fal fa-shopping-cart"></BasketIcon>
-        <CartCount>0</CartCount>
-      </CartButton>
-      <CartBackdrop onClick={toggle}></CartBackdrop>
-      <CartContent>
-        <CartHeader>
-          <CartTitle>My Cart</CartTitle>
-          <CloseIcon onClick={toggle} className="fas fa-times"></CloseIcon>
-        </CartHeader>
+  const renderSideCart = () => {
+    return (
+      <>
         <CartBody>
-          <SideCartItem />
-          <SideCartItem />
-          <SideCartItem />
+          {cart.items
+            .reverse()
+            .slice(0, 3)
+            .map((item) => (
+              <SideCartItem key={item.product.id} data={item} />
+            ))}
         </CartBody>
         <CartFooter>
           <Group>
             <FooterText>Total</FooterText>
-            <TotalPrice>{currencyFormat(130)}</TotalPrice>
+            <TotalPrice>{currencyFormat(cart.totalPrice)}</TotalPrice>
           </Group>
           <Terms>
-            <Checkbox defaultChecked={isTerms} onClick={()=>setIsTerms(!isTerms)} type="checkbox" />I
-            agree with the
+            <Checkbox
+              defaultChecked={isTerms}
+              onClick={() => setIsTerms(!isTerms)}
+              type="checkbox"
+            />
+            I agree with the
             <TermsLink to="/">Terms & conditions</TermsLink>
           </Terms>
           <Group onClick={toggle}>
@@ -165,6 +168,34 @@ const SideCart = ({ children, icon, title, count }) => {
             <Button href="/cart">View Cart</Button>
           </Group>
         </CartFooter>
+      </>
+    );
+  };
+  const renderSideEmpty = () => {
+    return (
+      <>
+        <CartBody>
+          <TextMuted>Your cart is currently empty.</TextMuted>
+          <Button outlinePrimary block radius href="/products ">
+            Continue Shopping
+          </Button>
+        </CartBody>
+      </>
+    );
+  };
+  return (
+    <Cart className={isOpen ? "active" : ""}>
+      <CartButton onClick={toggle}>
+        <BasketIcon className="fal fa-shopping-cart"></BasketIcon>
+        <CartCount>{cart.items.length}</CartCount>
+      </CartButton>
+      <CartBackdrop onClick={toggle}></CartBackdrop>
+      <CartContent>
+        <CartHeader>
+          <CartTitle>My Cart</CartTitle>
+          <CloseIcon onClick={toggle} className="fas fa-times"></CloseIcon>
+        </CartHeader>
+        {cart.items.length > 0 ? renderSideCart() : renderSideEmpty()}
       </CartContent>
     </Cart>
   );

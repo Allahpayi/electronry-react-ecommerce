@@ -1,7 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { currencyFormat } from "../../utils/currency-format";
+import { addToCart } from "../../redux/actions/cartActions";
 
 const CardActions = styled.div`
   display: flex;
@@ -121,7 +123,16 @@ const CardBold = styled.p`
   color: ${(props) => (props.red ? "var(--color-red)" : "var(--color-gray)")};
 `;
 const Card = ({ product }) => {
-
+  const dispatch = useDispatch();
+  const addToCartHandler = (product) => {
+    dispatch(
+      addToCart({
+        product,
+        quantity: 1,
+        total: product.price,
+      })
+    );
+  };
   return (
     <ProductCard>
       <CardHeader>
@@ -130,6 +141,7 @@ const Card = ({ product }) => {
           <CardIcon className="far fa-heart"></CardIcon>
           {/* <CardIcon red className="fas fa-heart"></CardIcon> */}
           <CardIcon
+            onClick={() => addToCartHandler(product)}
             className="fas fa-cart-plus"
           ></CardIcon>
         </CardActions>

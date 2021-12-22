@@ -1,6 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { removeFromCart } from "../../redux/actions/cartActions";
 import { currencyFormat } from "../../utils/currency-format";
 import { Td, Tr } from "../Table";
 
@@ -12,6 +14,7 @@ const ProductInfo = styled.div`
 const CardImg = styled.img`
   width: 6rem;
   height: 6rem;
+  margin-right: 2rem;
   object-fit: contain;
 `;
 const Group = styled.div`
@@ -32,6 +35,7 @@ const CardMuted = styled.p`
   font-style: italic;
   font-size: 0.8rem;
   font-weight: 200;
+  text-transform: uppercase;
   color: var(--color-gray);
   &:not(:last-of-type)::after {
     content: " /";
@@ -52,10 +56,6 @@ const Quantity = styled.input`
 `;
 
 const CardDelete = styled.i`
-  position: absolute;
-  top: 0;
-  left: 18%;
-  transform: translateX(-18,0);
   width: 1.8rem;
   height: 1.8rem;
   text-align: center;
@@ -67,31 +67,40 @@ const CardDelete = styled.i`
     color: var(--color-red);
   }
 `;
-const CartItem = () => {
+const CartItem = ({ data }) => {
+  const dispatch = useDispatch();
+  const removeItemFromCart = (id) => {
+    if (window.confirm("Delete the product from the card?")) {
+      dispatch(removeFromCart(id));
+    }
+  };
   return (
     <Tr>
       <Td>
         <ProductInfo>
-          <CardImg src="/assets/images/products/product-4.jpg" />
+          <CardImg src={data.product.img[0]} />
           <Group column>
-            <CardName to="/">Home Tosmois de Cras Hamo Dincidunts</CardName>
+            <CardName to="/">{data.product.name}</CardName>
             <Group>
-              <CardMuted>XS</CardMuted>
-              <CardMuted>Black</CardMuted>
+              <CardMuted>{data.product.sku}</CardMuted>
             </Group>
           </Group>
-          <CardDelete className="fa fa-trash-alt"></CardDelete>
         </ProductInfo>
-        
       </Td>
       <Td>
-        <CardPrice>{currencyFormat(140)}</CardPrice>
+        <CardPrice>{currencyFormat(data.product.price)}</CardPrice>
       </Td>
       <Td>
-        <Quantity min="1" type="number" defaultValue="1" />
+        <Quantity min="1" type="number" defaultValue={data.quantity} />
       </Td>
       <Td>
-        <CardPrice>{currencyFormat(140)}</CardPrice>
+        <CardPrice>{currencyFormat(data.total)}</CardPrice>
+      </Td>
+      <Td>
+        <CardDelete
+          onClick={() => removeItemFromCart(data.product.id)}
+          className="fa fa-trash-alt"
+        ></CardDelete>
       </Td>
     </Tr>
   );

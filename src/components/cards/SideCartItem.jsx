@@ -1,7 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { currencyFormat } from "../../utils/currency-format";
+import {removeFromCart} from '../../redux/actions/cartActions';
 
 const Item = styled.div`
   display: flex;
@@ -12,6 +14,7 @@ const Item = styled.div`
 const ItemImg = styled.img`
   width: 6rem;
   height: 6rem;
+  margin-right: 1rem;
   object-fit: contain;
 `;
 const Group = styled.div`
@@ -56,19 +59,30 @@ const ItemDelete = styled.i`
     color: var(--color-red);
   }
 `;
-const SideCartItem = () => {
+const SideCartItem = ({ data }) => {
+  const dispatch = useDispatch();
+
+  const removeItemFromCart = (id) => {
+    if (window.confirm("Delete the product from the card?")) {
+      dispatch(removeFromCart(id));
+    }
+  };
   return (
     <Item>
-      <ItemImg src="/assets/images/products/product-4.jpg" />
+      <ItemImg src={data.product.img[0]} />
       <Group column>
-        <ItemName to="/">Home Tosmois de Cras Hamo Dincidunts</ItemName>
+        <ItemName to="/">{data.product.name}</ItemName>
         <Group>
-          <ItemMuted>XS</ItemMuted>
-          <ItemMuted>Black</ItemMuted>
+          <ItemMuted>SKU: {data.product.sku}</ItemMuted>
         </Group>
-        <ItemPrice>{currencyFormat(140)}</ItemPrice>
+        <ItemPrice>
+          {data.quantity} x {currencyFormat(data.product.price)}
+        </ItemPrice>
       </Group>
-      <ItemDelete className="fa fa-trash-alt"></ItemDelete>
+      <ItemDelete
+        onClick={()=>removeItemFromCart(data.product.id)}
+        className="fa fa-trash-alt"
+      ></ItemDelete>
     </Item>
   );
 };
