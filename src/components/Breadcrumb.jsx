@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const BreadcrumbContainer = styled.div`
-    padding: 1rem 0;
-    text-align: center;
-
+    padding: 1rem;
 `;
 
 const BreadcrumbItem = styled(Link)`

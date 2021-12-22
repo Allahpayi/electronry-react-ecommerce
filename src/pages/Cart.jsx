@@ -28,6 +28,7 @@ const Empty = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
 `;
 
 const TextMuted = styled.p`

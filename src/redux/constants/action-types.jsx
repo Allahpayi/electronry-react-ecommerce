@@ -1,5 +1,7 @@
 export const ActionTypes = {
   GET_PRODUCTS: "GET_PRODUCTS",
+  GET_PRODUCT: "GET_PRODUCT",
+
   GET_CATEGORIES: "GET_CATEGORIES",
 
   // CART

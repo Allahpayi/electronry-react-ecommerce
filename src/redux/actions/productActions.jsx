@@ -7,9 +7,9 @@ export const getProducts = (products) => {
   };
 };
 
-export const getDiscount = ([products]) => {
+export const getProduct = (id) => {
   return {
-    type: ActionTypes.DISCOUNT,
-    payload: products,
+    type: ActionTypes.GET_PRODUCT,
+    payload: id,
   };
 };
