@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import { getProducts } from "./redux/actions/productActions";
 import { getCategories } from "./redux/actions/categoryActions";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/product/:id">
+          <ProductDetail />
         </Route>
       </Switch>
       <Footer />

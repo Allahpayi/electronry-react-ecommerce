@@ -8,7 +8,14 @@ import { Link } from "react-router-dom";
 const CartSummary = styled.div``;
 
 const CartSummaryHeader = styled.div``;
-
+const CartSummaryBody = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  @media(max-width:762px){
+  grid-template-columns: repeat(1,1fr);
+  }
+`;
 const CartSummaryTitle = styled.p`
   padding: 1rem 0;
   border-bottom: 2px solid var(--color-black);
@@ -23,12 +30,9 @@ const Group = styled.div`
   border-bottom: 1px solid var(--border-color);
 `;
 const Form = styled.form`
+  width: 100%;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border-color);
   transition: height 1s ease;
-  &:last-of-type {
-    border-bottom: 0;
-  }
 `;
 
 const FormTitle = styled.p``;
@@ -40,8 +44,8 @@ const GroupText = styled.div`
 const Terms = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   font-weight: 300;
   color: var(--color-gray);
 `;
@@ -56,7 +60,7 @@ const TermsLink = styled(Link)`
   color: var(--color-black);
 `;
 
-const OrderSummary = ({totalPrice}) => {
+const OrderSummary = ({ totalPrice }) => {
   const [isTerms, setIsTerms] = useState(false);
   const [collapse, setCollapse] = useState(true);
   return (
@@ -64,44 +68,47 @@ const OrderSummary = ({totalPrice}) => {
       <CartSummaryHeader>
         <CartSummaryTitle>ORDER SUMMARY</CartSummaryTitle>
         <Group>
-          <GroupText>Sub Total:</GroupText>
-          <GroupText>{currencyFormat(totalPrice)}</GroupText>
-        </Group>
-      </CartSummaryHeader>
-      <Form>
-        <FormTitle onClick={() => setCollapse(!collapse)}>
-          Get Shipping Estimates
-        </FormTitle>
-        <Select padding block data={["Azerbaijany", "Turkey", "United States"]} />
-        <Select padding block data={["Sabirabad", "Baku", "Shirvan"]} />
-        <Input block placeholder="ZIP Code" />
-        <Button href="/cart" block outlinePrimary>
-          Calculate Shipping
-        </Button>
-      </Form>
-      <Form>
-        <FormTitle>Coupon Code:</FormTitle>
-        <Input block />
-        <Group>
           <GroupText>Total:</GroupText>
           <GroupText>{currencyFormat(totalPrice)}</GroupText>
         </Group>
-        <Terms>
-          <Checkbox
-            defaultChecked={isTerms}
-            onClick={() => setIsTerms(!isTerms)}
-            type="checkbox"
+      </CartSummaryHeader>
+      <CartSummaryBody>
+        <Form>
+          <FormTitle onClick={() => setCollapse(!collapse)}>
+            Get Shipping Estimates
+          </FormTitle>
+          <Select
+            padding
+            block
+            data={["Azerbaijany", "Turkey", "United States"]}
           />
-          I agree with the
-          <TermsLink to="/">Terms & conditions</TermsLink>
-        </Terms>
-        <Button disabled={!isTerms} href="checkout" block primary>
-          Proceed to Checkout
-        </Button>
-        <Button href="/products" block outlinePrimary>
-          Continue Shopping
-        </Button>
-      </Form>
+          <Select padding block data={["Sabirabad", "Baku", "Shirvan"]} />
+          <Input block placeholder="ZIP Code" />
+          <Button href="/cart" block outlinePrimary>
+            Calculate Shipping
+          </Button>
+        </Form>
+        <Form>
+          <FormTitle>Coupon Code:</FormTitle>
+          <Input block />
+
+          <Terms>
+            <Checkbox
+              defaultChecked={isTerms}
+              onClick={() => setIsTerms(!isTerms)}
+              type="checkbox"
+            />
+            I agree with the
+            <TermsLink to="/">Terms & conditions</TermsLink>
+          </Terms>
+          <Button disabled={!isTerms} href="checkout" block primary>
+            Proceed to Checkout
+          </Button>
+          <Button href="/products" block outlinePrimary>
+            Continue Shopping
+          </Button>
+        </Form>
+      </CartSummaryBody>
     </CartSummary>
   );
 };

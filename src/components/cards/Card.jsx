@@ -124,12 +124,13 @@ const CardBold = styled.p`
 `;
 const Card = ({ product }) => {
   const dispatch = useDispatch();
+  let discountPrice = (product.price * (100 - product.discountRate)) / 100;
   const addToCartHandler = (product) => {
     dispatch(
       addToCart({
         product,
         quantity: 1,
-        total: product.price,
+        total: product.discount ? discountPrice : product.price,
       })
     );
   };

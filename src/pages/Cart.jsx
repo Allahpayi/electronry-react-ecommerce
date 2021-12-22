@@ -6,11 +6,9 @@ import OrderSummary from "../components/OrderSummary";
 import Breadcrumb from "../components/Breadcrumb";
 import { useSelector } from "react-redux";
 import Button from "../components/form-elements/Button";
+import PageBanner from "../containers/PageBanner";
 
-const CartContainer = styled.div`
-  padding: 1rem;
-  padding-top: 0;
-`;
+const CartContainer = styled.div``;
 
 const ProductList = styled.div`
   @media (max-width: 592px) {
@@ -18,12 +16,12 @@ const ProductList = styled.div`
   }
 `;
 const CartContent = styled.div`
+  padding: 1rem;
+  padding-top: 0;
   display: flex;
-  gap: 1rem;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
   @media (max-width: 992px) {
-    flex-direction: column;
   }
 `;
 const Empty = styled.div`
@@ -41,7 +39,7 @@ const Cart = () => {
 
   const renderCart = () => {
     return (
-      <>
+      <CartContent>
         <ProductList>
           <Table thead={["Product", "Price", "Quantity", "Total", ""]}>
             {cart.items.map((cartItem) => (
@@ -50,7 +48,7 @@ const Cart = () => {
           </Table>
         </ProductList>
         <OrderSummary totalPrice={cart.totalPrice} />
-      </>
+      </CartContent>
     );
   };
   const renderEmptyCart = () => {
@@ -66,10 +64,9 @@ const Cart = () => {
 
   return (
     <CartContainer>
+      <PageBanner />
       <Breadcrumb data={[{ name: " my cart", href: "/cart" }]} />
-      <CartContent>
-        {cart.items.length > 0 ? renderCart() : renderEmptyCart()}
-      </CartContent>
+      {cart.items.length > 0 ? renderCart() : renderEmptyCart()}
     </CartContainer>
   );
 };

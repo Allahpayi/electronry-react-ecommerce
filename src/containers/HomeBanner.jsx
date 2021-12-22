@@ -5,6 +5,7 @@ import Grid from "../components/Grid";
 
 const Banner = styled.div`
   padding: 2rem 1rem;
+  padding-top: 1px;
   background-color: var(--color-main2);
 `;
 const BannerImg = styled.img`
@@ -16,7 +17,6 @@ const BannerItem = styled(Link)`
   position: relative;
   border-radius: 0.4rem;
   overflow: hidden;
-  
   &::before {
     content: "";
     position: absolute;
@@ -51,14 +51,14 @@ const HomeBanner = () => {
           <BannerImg src="/assets/images/banner-3.jpg" alt="" />
         </BannerItem>
       </Grid>
-      <Grid col={1} mdCol={2} lgCol={2} gap={30}>
+      {/* <Grid col={1} mdCol={2} lgCol={2} gap={30}>
         <BannerItem to="/">
           <BannerImg src="/assets/images/banner-4.jpg" alt="" />
         </BannerItem>
         <BannerItem to="/">
           <BannerImg src="/assets/images/banner-5.jpg" alt="" />
         </BannerItem>
-      </Grid>
+      </Grid> */}
     </Banner>
   );
 };

@@ -45,7 +45,10 @@ const CardMuted = styled.p`
   }
 `;
 const CardPrice = styled.p`
-  margin-bottom: 0.4rem;
+  color: ${(props) => props.muted && "var(--color-gray)"};
+  text-decoration: ${(props) => props.muted && "line-through"};
+  font-weight: ${(props) => props.discount && "600"};
+  color: ${(props) => props.discount && "var(--color-red)"};
 `;
 
 const Quantity = styled.input`
@@ -69,6 +72,8 @@ const CardDelete = styled.i`
 `;
 const CartItem = ({ data }) => {
   const dispatch = useDispatch();
+  let discountPrice =
+    (data.product.price * (100 - data.product.discountRate)) / 100;
   const removeItemFromCart = (id) => {
     if (window.confirm("Delete the product from the card?")) {
       dispatch(removeFromCart(id));
@@ -88,7 +93,8 @@ const CartItem = ({ data }) => {
         </ProductInfo>
       </Td>
       <Td>
-        <CardPrice>{currencyFormat(data.product.price)}</CardPrice>
+        <CardPrice muted>{currencyFormat(data.product.price)}</CardPrice>
+        <CardPrice discount>{currencyFormat(discountPrice)}</CardPrice>
       </Td>
       <Td>
         <Quantity min="1" type="number" defaultValue={data.quantity} />

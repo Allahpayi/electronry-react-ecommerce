@@ -61,7 +61,7 @@ const ItemDelete = styled.i`
 `;
 const SideCartItem = ({ data }) => {
   const dispatch = useDispatch();
-
+  let discountPrice = (data.product.price * (100 - data.product.discountRate)) / 100;
   const removeItemFromCart = (id) => {
     if (window.confirm("Delete the product from the card?")) {
       dispatch(removeFromCart(id));
@@ -76,7 +76,7 @@ const SideCartItem = ({ data }) => {
           <ItemMuted>SKU: {data.product.sku}</ItemMuted>
         </Group>
         <ItemPrice>
-          {data.quantity} x {currencyFormat(data.product.price)}
+          {data.quantity} x {currencyFormat(discountPrice)} 
         </ItemPrice>
       </Group>
       <ItemDelete

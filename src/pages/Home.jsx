@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Section from "../containers/Section";
 import HomeBanner from "../containers/HomeBanner";
@@ -7,7 +7,7 @@ import Policy from "../containers/Policy";
 import Card from "../components/cards/Card";
 import Grid from "../components/Grid";
 import CategoryCard from "../components/cards/CategoryCard";
-import HomeSubBanner from "../containers/HomeSubBanner";
+import SubBanner from "../containers/SubBanner";
 import Brands from "../containers/Brands";
 import HomeAbout from "../containers/HomeAbout";
 import { useSelector } from "react-redux";
@@ -66,7 +66,7 @@ const Home = () => {
           ))}
         </Grid>
       </Section>
-      <HomeSubBanner img={["/assets/images/banner-appliances.jpg"]} />
+      <SubBanner img={["/assets/images/banner-appliances.jpg"]} />
       <Section title="Top Rated" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
           {topRated.map((product) => (
@@ -74,7 +74,7 @@ const Home = () => {
           ))}
         </Grid>
       </Section>
-      <HomeSubBanner
+      <SubBanner
         img={[
           "/assets/images/sub-banner-1.jpg",
           "/assets/images/sub-banner-2.jpg",

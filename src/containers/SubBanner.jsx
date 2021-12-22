@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "../components/Grid";
 const BannerImg = styled.img``;
-const HomeSubBanner = ({ img }) => {
+const SubBanner = ({ img }) => {
   return (
     <Grid col={1} mdCol={img.length} lgCol={img.length} gap={20} margin={20}>
       {img.map((item, index) => (
@@ -12,4 +12,4 @@ const HomeSubBanner = ({ img }) => {
   );
 };
 
-export default HomeSubBanner;
+export default SubBanner;
