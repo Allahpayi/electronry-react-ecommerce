@@ -42,7 +42,7 @@ const Card = styled(Link)`
     }
   }
 `;
-const CardIcon = styled.i`
+const Icon = styled.i`
   font-size: 2.5rem;
   margin-right: 1rem;
 `;
@@ -50,7 +50,7 @@ const CardIcon = styled.i`
 const PolicyCard = ({ data }) => {
   return (
     <Card to="/">
-      <CardIcon className={data.icon}></CardIcon>
+      <Icon className={data.icon}></Icon>
       <CardText>{data.text}</CardText>
     </Card>
   );

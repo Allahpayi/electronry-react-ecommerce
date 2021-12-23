@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { sosial } from "../../config";
 
 const SosialList = styled.ul`
   display: flex;
@@ -27,59 +28,18 @@ const SosialLink = styled.a`
 const SosialIcons = () => {
   return (
     <SosialList className="social-icons">
-      <SosialListItem>
-        <SosialLink
-          href="http://facebook.com/electronry"
-          title="Facebook"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SosialIcon className="fab fa-facebook-f"></SosialIcon>
-        </SosialLink>
-      </SosialListItem>
-
-      <SosialListItem>
-        <SosialLink
-          href="http://twitter.com/electronry"
-          title="Twitter"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SosialIcon className="fab fa-twitter"></SosialIcon>
-        </SosialLink>
-      </SosialListItem>
-
-      <SosialListItem>
-        <SosialLink
-          href="http://instagram.com/electronry"
-          title="Instagram"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SosialIcon className="fab fa-instagram"></SosialIcon>
-        </SosialLink>
-      </SosialListItem>
-      <SosialListItem>
-        <SosialLink
-          href="https://pinterest.com/electronry"
-          title="Pinterest"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SosialIcon className="fab fa-pinterest-p"></SosialIcon>
-        </SosialLink>
-      </SosialListItem>
-
-      <SosialListItem>
-        <SosialLink
-          href="https://www.youtube.com/electronry"
-          title="YouTube"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SosialIcon className="fab fa-youtube"></SosialIcon>
-        </SosialLink>
-      </SosialListItem>
+      {sosial.map((item) => (
+        <SosialListItem key={item.id}>
+          <SosialLink
+            href={item.link}
+            title={item.name}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SosialIcon className={item.icon}></SosialIcon>
+          </SosialLink>
+        </SosialListItem>
+      ))}
     </SosialList>
   );
 };

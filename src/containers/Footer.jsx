@@ -7,7 +7,6 @@ import SignUp from "../components/footer/SignUp";
 import SosialIcons from "../components/footer/SosialIcons";
 import Grid from "../components/Grid";
 import { brands, contactInfo, furtherInfo } from "../config";
-import data from "../fake-data/db";
 
 const FooterContainer = styled.footer`
   padding: 4rem;

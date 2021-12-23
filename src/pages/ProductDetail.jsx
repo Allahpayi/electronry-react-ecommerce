@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Zoom from 'react-img-zoom'
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { getProduct } from "../redux/actions/productActions";
 import Breadcrumb from "../components/Breadcrumb";
+import Rating from "../components/tools/Rating";
+// import PageBanner from '../containers/PageBanner';
 
 const ProductDetailContainer = styled.div``;
 const ProductDetailHeader = styled.div`
@@ -36,7 +37,7 @@ const ProductMainImg = styled.img`
   height: 80vh;
   object-fit: contain;
   transition: all 0.3s ease;
-  &.hover-zoom:hover {
+  &:hover {
     transform: scale(1.25);
   }
   @media (max-width: 992px) {
@@ -57,17 +58,34 @@ const ProductImg = styled.img`
 
 const ProductInfo = styled.div``;
 
+const ProductTitle = styled.h3``;
+
+
+const Group = styled.div``;
+
+const List = styled.ul``;
+
+const ListItem = styled.li``;
+
+const ListLink = styled(Link)``;
+
+const BoldText = styled.p``;
+
+const MutedText = styled.p``;
+
+const Text = styled.p``;
+
 const ProductDetail = () => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.allProducts.selectedProduct);
+  const [activeImg, setActiveImg] = useState(null);
   const params = useParams();
   const id = Number(params.id);
-  const [activeImg, setActiveImg] = useState(product.img[0]);
-  console.log(product);
   const breadcrumbData = [
     { name: " Product ", href: "/products" },
     { name: product.name, href: `/product/${id}` },
   ];
+
   const fetchProduct = async () => {
     const response = await axios
       .get(`http://localhost:3000/products/${id}`)
@@ -75,6 +93,7 @@ const ProductDetail = () => {
         console.log("Err: ", err);
       });
     dispatch(getProduct(response.data));
+    setActiveImg(response.data.img[0]);
   };
   useEffect(() => {
     fetchProduct();
@@ -83,15 +102,16 @@ const ProductDetail = () => {
   return (
     <ProductDetailContainer>
       <ProductDetailHeader>
+        {/* <PageBanner/> */}
         <Breadcrumb data={breadcrumbData} />
       </ProductDetailHeader>
       <ProductDetailBody>
         <ProductImages>
           <ImageWrapper>
-            <ProductMainImg className="hover-zoom" src={activeImg} />
+            <ProductMainImg src={activeImg} />
           </ImageWrapper>
           <ProductOtherImages>
-            {product.img.map((productImg, index) => (
+            {product.img?.map((productImg, index) => (
               <ProductImg
                 onClick={() => setActiveImg(productImg)}
                 key={index}
@@ -102,6 +122,8 @@ const ProductDetail = () => {
           </ProductOtherImages>
         </ProductImages>
         <ProductInfo>
+          <ProductTitle>{product.name}</ProductTitle>
+          <Rating/>
         </ProductInfo>
       </ProductDetailBody>
     </ProductDetailContainer>

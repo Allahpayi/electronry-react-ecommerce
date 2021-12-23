@@ -5,7 +5,7 @@ import { Autoplay, Grid } from "swiper";
 import { brands } from "../config";
 import Section from "./Section";
 import styled from "styled-components";
-const BrandImg = styled.img` 
+const Img = styled.img` 
 padding: 2rem 0;
 `
 const Brands = () => {
@@ -35,7 +35,7 @@ const Brands = () => {
       >
         {brands.map((brand) => (
           <SwiperSlide key={brand.id}>
-            <BrandImg src={brand.img} alt="" />
+            <Img src={brand.img} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { paymentMethods } from "../../config";
+import Text from "../tools/Text";
+
 const CopyrightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -11,13 +13,7 @@ const CopyrightWrapper = styled.div`
     flex-direction: column;
   }
 `;
-const Text = styled.p`
-  font-size: 0.9rem;
-  color: var(--color-black2);
-  @media (max-width: 762px) {
-    text-align: center;
-  }
-`;
+
 const PaymentMethods = styled.div`
   display: flex;
   justify-content: space-between;
@@ -27,21 +23,18 @@ const PaymentMethods = styled.div`
     margin-top: 1rem;
   }
 `;
-const Icon = styled.img`
+const Img = styled.img`
   height: 1.6rem;
   object-fit: cover;
 `;
 const Copyright = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <CopyrightWrapper>
-      <Text>
-        © {year} Electronry. All Rights Reserved. Powered by
-        Ali Gulmaliyov.
-      </Text>
+      <Text>© {year} Electronry. Prepared by Ali Gulmaliyev</Text>
       <PaymentMethods>
         {paymentMethods.map((payment) => (
-          <Icon key={payment.id} src={payment.icon} alt={payment.name} />
+          <Img key={payment.id} src={payment.icon} alt={payment.name} />
         ))}
       </PaymentMethods>
     </CopyrightWrapper>

@@ -64,7 +64,7 @@ module.exports = {
       url: "/",
     },
     {
-      name: " Reward Program",
+      name: "Reward Program",
       icon: "",
       url: "/",
     },
@@ -80,7 +80,7 @@ module.exports = {
   brands: [
     {
       id: "1",
-      name: " Sony",
+      name: "Sony",
       icon: "",
       url: "/",
       img: "/assets/images/brands/brand-4.jpg",
@@ -210,6 +210,38 @@ module.exports = {
       description: "Praesent suscipit mattis facilisis.",
       img: "/assets/images/icon-us-4.png",
       url: "/about-us",
+    },
+  ],
+  sosial: [
+    {
+      id: 1,
+      link: "http://facebook.com/electronry",
+      name: "Facebook",
+      icon: "fab fa-facebook-f",
+    },
+    {
+      id: 2,
+      link: "http://twitter.com/electronry",
+      name: "Twitter",
+      icon: "fab fa-twitter",
+    },
+    {
+      id: 3,
+      link: "http://instagram.com/electronry",
+      name: "Instagram",
+      icon: "fab fa-instagram",
+    },
+    {
+      id: 4,
+      link: "http://pinterest.com/electronry",
+      name: "Pinterest",
+      icon: "fab fa-pinterest-p",
+    },
+    {
+      id: 5,
+      link: "http://www.youtube.com/electronry",
+      name: "YouTube",
+      icon: "fab fa-youtube",
     },
   ],
 };

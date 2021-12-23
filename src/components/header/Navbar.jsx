@@ -13,20 +13,15 @@ const Nav = styled.ul`
   }
 `;
 const NavLink = styled(Link)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--color-black);
   transition: all 0.4s ease;
 `;
 const NavItem = styled.li`
   position: relative;
-  padding: 1rem 0;
   margin-right: 1rem;
-  text-transform: capitalize;
+  &.active ${NavLink} {
+    color: var(--color-red);
+  }
   &:last-of-type {
     margin-right: 0rem;
   }
