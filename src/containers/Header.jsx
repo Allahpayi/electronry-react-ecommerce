@@ -3,104 +3,45 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import SideCart from "../components/header/SideCart";
 import Navbar from "../components/header/Navbar";
+import Logo from "../components/header/Logo";
 import SideNavbar from "../components/header/SideNavbar";
+import Group from "../components/tools/Group";
+import IconButton from "../components/form-elements/IconButton";
 
-const HeaderContainer = styled.div`
+const Container = styled.div`
   background-color: var(--color-main);
   border-bottom: 1px solid var(--border-color);
+  padding: 0.2rem 1rem;
 `;
-
-const HeaderTop = styled.p`
-  padding: 0.6rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-red);
-  background-color: var(--color-main2);
-  transition: border 0.4s ease;
-  & a {
-    display: inline;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: var(--color-red);
-      transition: all 0.4s ease;
-    }
-    &:hover::after {
-      width: 100%;
-    }
-  }
-`;
-const HeaderBottom = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4rem 1rem;
-  @media (max-width: 762px) {
-    padding: 1rem;
-  }
-`;
-const MenuBars = styled.i`
-  margin-right: 1rem;
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--color-black);
-  display: none;
-  @media (max-width: 762px) {
-    display: block;
-  }
-`;
-const Logo = styled(Link)`
-  font-size: 2.6rem;
-  font-weight: 500;
-  color: var(--color-black);
-  text-transform: uppercase;
-  & span {
-    color: var(--color-red);
-  }
-  @media (max-width: 762px) {
+const Bars = styled(IconButton)`
+  @media (min-width: 768px) {
     display: none;
   }
 `;
 
-const HeaderIconGroup = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const Icon = styled(Link)`
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-right: 1rem;
-  color: var(--color-black);
-`;
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openNavbar = () => {
     setIsOpen(true);
   };
   return (
-    <HeaderContainer>
-      <HeaderTop>
-        Mid-season sale up to 70% off. <Link to="/">Shop now</Link>
-      </HeaderTop>
-      <HeaderBottom>
-        <MenuBars onClick={openNavbar} className="fas fa-bars"></MenuBars>
-        <Logo to="/">
-          E<span>R</span>
-        </Logo>
+    <Container>
+      <Group alignItems="center" justifyContent="space-between">
+        <Bars size="2" onClick={openNavbar} className="fas fa-bars" />
+        <Logo />
         <Navbar />
         <SideNavbar toggle={[isOpen, setIsOpen]} />
-        <HeaderIconGroup>
-          <Icon to="/login" className="fal fa-user-alt"></Icon>
-          <Icon to="/favorities" className="far fa-heart"></Icon>
+        <Group alignItems="center">
+          <Link to="/login">
+            <IconButton size="1.6" className="fal fa-user-alt" />
+          </Link>
+          <Link to="/favorities">
+            <IconButton size="1.6" className="fal fa-heart" />
+          </Link>
           <SideCart />
-        </HeaderIconGroup>
-      </HeaderBottom>
-    </HeaderContainer>
+        </Group>
+      </Group>
+    </Container>
   );
 };
 

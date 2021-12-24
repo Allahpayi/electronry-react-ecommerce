@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../containers/Section";
-import HomeBanner from "../containers/HomeBanner";
-import HomeSlider from "../containers/HomeSlider";
+import Banner from "../containers/home/Banner";
+import Slider from "../containers/home/Slider";
+import About from "../containers/home/About";
 import Policy from "../containers/Policy";
 import Card from "../components/cards/Card";
 import Grid from "../components/Grid";
 import CategoryCard from "../components/cards/CategoryCard";
 import SubBanner from "../containers/SubBanner";
 import Brands from "../containers/Brands";
-import HomeAbout from "../containers/HomeAbout";
 import { useSelector } from "react-redux";
 
 const BannerMiddle = styled.img`
@@ -40,9 +40,9 @@ const Home = () => {
 
   return (
     <>
-      <HomeSlider />
+      <Slider />
       <Policy />
-      <HomeBanner />
+      <Banner />
       <Section red title="flash deals" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
           {discount.map((product) => (
@@ -95,7 +95,7 @@ const Home = () => {
           ))}
         </Grid>
       </Section>
-      <HomeAbout />
+      <About />
     </>
   );
 };

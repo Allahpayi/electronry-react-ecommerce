@@ -1,30 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-const CardText = styled.p``;
+import Text from "../tools/Text";
+
 const Card = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 0.8rem 0 1rem 0;
-  color: var(--color-black);
-  ${CardText} {
-    &::after {
-      content: "";
-      display: block;
-      width: 0%;
-      height: 1px;
-      background-color: var(--color-black);
-      transition: width 0.4s ease;
-    }
-  }
-  &:hover ${CardText} {
-    &::after {
-      width: 100%;
-    }
-  }
-
   @media (min-width: 762px) {
     &:not(:last-of-type)::after {
       content: "";
@@ -42,6 +26,7 @@ const Card = styled(Link)`
     }
   }
 `;
+
 const Icon = styled.i`
   font-size: 2.5rem;
   margin-right: 1rem;
@@ -51,7 +36,7 @@ const PolicyCard = ({ data }) => {
   return (
     <Card to="/">
       <Icon className={data.icon}></Icon>
-      <CardText>{data.text}</CardText>
+      <Text>{data.text}</Text>
     </Card>
   );
 };

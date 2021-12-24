@@ -81,7 +81,7 @@ const NextIcon = styled.span`
     }
   }
 `;
-const HomeSlider = () => {
+const Slider = () => {
   return (
     <Swiper
       loop
@@ -131,4 +131,4 @@ const HomeSlider = () => {
   );
 };
 
-export default HomeSlider;
+export default Slider;

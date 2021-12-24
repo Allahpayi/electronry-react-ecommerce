@@ -10,20 +10,21 @@ const CustomTable = styled.table`
   }
 `;
 const THead = styled.thead`
-  background-color: var(--color-main2);
-  color: var(--color-black);
+  color: var(--color-main);
+  background-color: var(--color-black);
 `;
 const TableRow = styled.tr``;
 const Th = styled.th`
   padding: 1rem;
   text-align: left;
+  border: 1px solid var(--color-black);
 `;
 const TableDescription = styled.td`
   padding: 1rem;
 `;
 const TBody = styled.tbody`
   & ${TableRow} {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-black);
   }
 `;
 

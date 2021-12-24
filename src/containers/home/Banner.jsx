@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Grid from "../components/Grid";
+import Grid from "../../components/Grid";
 
-const Banner = styled.div`
+const BannerContainer = styled.div`
   padding: 2rem 1rem;
   padding-top: 1px;
   background-color: var(--color-main2);
@@ -37,9 +37,9 @@ const BannerItem = styled(Link)`
   }
 `;
 
-const HomeBanner = () => {
+const Banner = () => {
   return (
-    <Banner>
+    <BannerContainer>
       <Grid col={1} mdCol={3} lgCol={3} gap={30}>
         <BannerItem to="/">
           <BannerImg src="/assets/images/banner-1.jpg" alt="" />
@@ -59,8 +59,8 @@ const HomeBanner = () => {
           <BannerImg src="/assets/images/banner-5.jpg" alt="" />
         </BannerItem>
       </Grid> */}
-    </Banner>
+    </BannerContainer>
   );
 };
 
-export default HomeBanner;
+export default Banner;

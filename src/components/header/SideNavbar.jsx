@@ -35,8 +35,12 @@ const Backdrop = styled.div`
 `;
 
 const SideNav = styled.div`
+  
   @media (min-width: 762px) {
     display: none;
+  }
+  @media (max-width: 762px) {
+    position: absolute;
   }
   &.active ${Menu} {
     transform: translateX(0rem);

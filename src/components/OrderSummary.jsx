@@ -1,82 +1,50 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./form-elements/Button";
 import Input from "./form-elements/Input";
+import Checkbox from "./form-elements/Checkbox";
 import Select from "./form-elements/Select";
+import Text from "./tools/Text";
+import Group from "./tools/Group";
+import Grid from "./Grid";
 import { currencyFormat } from "../utils/currency-format";
-import { Link } from "react-router-dom";
-const CartSummary = styled.div``;
 
-const CartSummaryHeader = styled.div``;
-const CartSummaryBody = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 1rem;
-  @media(max-width:762px){
-  grid-template-columns: repeat(1,1fr);
-  }
-`;
-const CartSummaryTitle = styled.p`
+const Title = styled.p`
   padding: 1rem 0;
   border-bottom: 2px solid var(--color-black);
   font-weight: 500;
 `;
 
-const Group = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border-color);
-`;
 const Form = styled.form`
   width: 100%;
   padding: 1rem 0;
-  transition: height 1s ease;
-`;
-
-const FormTitle = styled.p``;
-
-const GroupText = styled.div`
-  font-weight: 600;
-  font-size: 1.1rem;
-`;
-const Terms = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  font-weight: 300;
-  color: var(--color-gray);
-`;
-const Checkbox = styled.input`
-  margin-right: 0.6rem;
-`;
-
-const TermsLink = styled(Link)`
-  margin-left: 0.2rem;
-  font-weight: 400;
-  text-decoration: underline;
-  color: var(--color-black);
 `;
 
 const OrderSummary = ({ totalPrice }) => {
   const [isTerms, setIsTerms] = useState(false);
-  const [collapse, setCollapse] = useState(true);
   return (
-    <CartSummary>
-      <CartSummaryHeader>
-        <CartSummaryTitle>ORDER SUMMARY</CartSummaryTitle>
-        <Group>
-          <GroupText>Total:</GroupText>
-          <GroupText>{currencyFormat(totalPrice)}</GroupText>
+    <Group direction="column">
+      <Group direction="column">
+        <Title>ORDER SUMMARY</Title>
+        <Group
+          justifyContent="space-between"
+          alignItems="center"
+          margin="1rem 0"
+        >
+          <Text fontSize="1.2" weight="400">
+            Total:
+          </Text>
+          <Text fontSize="1.2" weight="600">
+            {currencyFormat(totalPrice)}
+          </Text>
         </Group>
-      </CartSummaryHeader>
-      <CartSummaryBody>
+      </Group>
+      <Grid lgCol={2} col={1} gap={20}>
         <Form>
-          <FormTitle onClick={() => setCollapse(!collapse)}>
+          <Text fontSize="1.1" weight="400">
             Get Shipping Estimates
-          </FormTitle>
+          </Text>
           <Select
             padding
             block
@@ -89,18 +57,28 @@ const OrderSummary = ({ totalPrice }) => {
           </Button>
         </Form>
         <Form>
-          <FormTitle>Coupon Code:</FormTitle>
+          <Text fontSize="1.1" weight="400">
+            Coupon Code:
+          </Text>
           <Input block />
-
-          <Terms>
+          <Group margin="1.2rem 0" alignItems="center">
             <Checkbox
-              defaultChecked={isTerms}
+              checked={isTerms}
               onClick={() => setIsTerms(!isTerms)}
+              margin="0 .4rem 0 0"
               type="checkbox"
             />
-            I agree with the
-            <TermsLink to="/">Terms & conditions</TermsLink>
-          </Terms>
+            <Text weight="300" color="var(--color-gray)">
+              I agree with the
+            </Text>
+            <Text
+              weight="400"
+              color="var(--color-black)"
+              decoration="underline"
+            >
+              <Link to="/">Terms & conditions</Link>
+            </Text>
+          </Group>
           <Button disabled={!isTerms} href="checkout" block primary>
             Proceed to Checkout
           </Button>
@@ -108,8 +86,8 @@ const OrderSummary = ({ totalPrice }) => {
             Continue Shopping
           </Button>
         </Form>
-      </CartSummaryBody>
-    </CartSummary>
+      </Grid>
+    </Group>
   );
 };
 

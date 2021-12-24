@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { getProduct } from "../redux/actions/productActions";
 import Breadcrumb from "../components/Breadcrumb";
 import Rating from "../components/tools/Rating";
-// import PageBanner from '../containers/PageBanner';
 
 const ProductDetailContainer = styled.div``;
 const ProductDetailHeader = styled.div`
@@ -60,7 +59,6 @@ const ProductInfo = styled.div``;
 
 const ProductTitle = styled.h3``;
 
-
 const Group = styled.div``;
 
 const List = styled.ul``;
@@ -102,7 +100,6 @@ const ProductDetail = () => {
   return (
     <ProductDetailContainer>
       <ProductDetailHeader>
-        {/* <PageBanner/> */}
         <Breadcrumb data={breadcrumbData} />
       </ProductDetailHeader>
       <ProductDetailBody>
@@ -123,7 +120,7 @@ const ProductDetail = () => {
         </ProductImages>
         <ProductInfo>
           <ProductTitle>{product.name}</ProductTitle>
-          <Rating/>
+          <Rating />
         </ProductInfo>
       </ProductDetailBody>
     </ProductDetailContainer>
