@@ -21,6 +21,7 @@ import {
   loadProducts,
 } from "../redux/actions/productActions";
 import { loadCategories } from "../redux/actions/categoryActions";
+import { useCallback } from "react";
 
 const BannerMiddle = styled.img`
   display: none;
@@ -50,18 +51,26 @@ const Home = () => {
     (state) => state.allProducts.mostPopularProducts
   );
 
-  useEffect(async () => {
+  const loadData = useCallback(async () => {
     await dispatch(loadProducts());
     await dispatch(loadCategories());
-  }, []);
+  }, [dispatch]);
+
+  const getFilterProducts = useCallback(async () => {
+    await dispatch(getDiscountProducts());
+    await dispatch(getNewProducts());
+    await dispatch(getBestSellingProducts());
+    await dispatch(getTopRatedProducts());
+    await dispatch(getMostPopularProducts());
+  }, [dispatch]);
 
   useEffect(() => {
-    dispatch(getDiscountProducts());
-    dispatch(getNewProducts());
-    dispatch(getBestSellingProducts());
-    dispatch(getTopRatedProducts());
-    dispatch(getMostPopularProducts());
-  }, [products]);
+    loadData();
+  }, [loadData]);
+
+  useEffect(() => {
+    getFilterProducts();
+  }, [products, getFilterProducts]);
 
   return (
     <Helmet title="Home">

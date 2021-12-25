@@ -13,8 +13,6 @@ const Container = styled.div`
 const NotFound = () => {
   const location = useLocation();
   const path = location.pathname.replace("/", "");
-  console.log(path);
-
   return (
     <Helmet title="Not Found">
       <Container>

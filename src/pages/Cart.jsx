@@ -6,7 +6,6 @@ import OrderSummary from "../components/OrderSummary";
 import Breadcrumb from "../components/Breadcrumb";
 import { useSelector } from "react-redux";
 import Button from "../components/form-elements/Button";
-import PageBanner from "../containers/PageBanner";
 import Helmet from "../components/Helmet";
 
 const CartContainer = styled.div``;

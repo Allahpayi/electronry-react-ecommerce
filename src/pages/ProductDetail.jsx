@@ -22,6 +22,7 @@ import Section from "../containers/Section";
 import Grid from "../components/Grid";
 import Card from "../components/cards/Card";
 import SubBanner from "../containers/SubBanner";
+import { useCallback } from "react";
 
 const ProductDetailContainer = styled.div``;
 const ProductDetailHeader = styled.div`
@@ -118,8 +119,9 @@ const ProductDetail = () => {
     { name: " Product ", href: "/products" },
     { name: selectedProduct.name, href: `/product/${id}` },
   ];
-
+  // eslint-disable-next-line
   const addedItemCart = () => {
+    // eslint-disable-next-line
     cart.items.map((item) => {
       if (item.product.id === id) {
         setSelectedColor(item.color);
@@ -146,18 +148,30 @@ const ProductDetail = () => {
     );
   };
 
-  useEffect(async () => {
+  const loadData = useCallback(async () => {
     await dispatch(loadProducts());
-  }, []);
-
-  useEffect(async () => {
+  }, [dispatch]);
+  const getFilteredData = useCallback(async () => {
     await dispatch(getProduct(id));
-  }, [allProducts]);
-
-  useEffect(async () => {
     await dispatch(getBestSellingProducts());
-    await setActiveImg(selectedProduct.img[0]);
-    await addedItemCart();
+  }, [dispatch, id]);
+
+  const setSelectedData = () => {
+    setActiveImg(selectedProduct.img[0]);
+    addedItemCart();
+  };
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
+  useEffect(() => {
+    getFilteredData();
+  }, [getFilteredData, allProducts]);
+
+  useEffect(() => {
+    setSelectedData();
+    // eslint-disable-next-line
   }, [selectedProduct]);
 
   return (

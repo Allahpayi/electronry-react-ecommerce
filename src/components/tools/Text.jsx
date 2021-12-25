@@ -32,7 +32,6 @@ const Text = ({
       decoration={decoration}
       fontSize={fontSize}
       margin={margin}
-      weight={weight}
       lineHeight={lineHeight}
       align={align}
     >
