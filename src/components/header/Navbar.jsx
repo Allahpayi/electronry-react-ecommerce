@@ -8,6 +8,7 @@ const Nav = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-main);
   @media (max-width: 762px) {
     display: none;
   }
@@ -19,8 +20,12 @@ const NavLink = styled(Link)`
 const NavItem = styled.li`
   position: relative;
   margin-right: 1rem;
-  &.active ${NavLink} {
-    color: var(--color-red);
+  &.active ${NavLink}::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--color-main);
   }
   &:last-of-type {
     margin-right: 0rem;

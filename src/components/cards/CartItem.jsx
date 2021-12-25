@@ -9,6 +9,7 @@ import { Td, Tr } from "../Table";
 import IconButton from "../form-elements/IconButton";
 import Text from "../tools/Text";
 import Group from "../tools/Group";
+import NumberInput from "../form-elements/NumberInput";
 
 const Img = styled.img`
   width: 6rem;
@@ -17,12 +18,7 @@ const Img = styled.img`
   object-fit: contain;
 `;
 
-const Quantity = styled.input`
-  width: 4rem;
-  padding: 0.8rem;
-  border: 1px solid var(--color-gray);
-  text-align: center;
-`;
+
 const Delete = styled(IconButton)`
   &:hover {
     color: var(--color-red);
@@ -60,7 +56,7 @@ const CartItem = ({ data }) => {
         </Text>
       </Td>
       <Td>
-        <Quantity min="1" type="number" defaultValue={data.quantity} />
+        <NumberInput min='1' value={data.quantity} />
       </Td>
       <Td>
         <Text weight="600" fontSize="1.1">

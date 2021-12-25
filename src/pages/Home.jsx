@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import Section from "../containers/Section";
 import Banner from "../containers/home/Banner";
@@ -10,7 +11,9 @@ import Grid from "../components/Grid";
 import CategoryCard from "../components/cards/CategoryCard";
 import SubBanner from "../containers/SubBanner";
 import Brands from "../containers/Brands";
-import { useSelector } from "react-redux";
+import Helmet from "../components/Helmet";
+import { loadProducts } from "../redux/actions/productActions";
+import { loadCategories } from "../redux/actions/categoryActions";
 
 const BannerMiddle = styled.img`
   display: none;
@@ -37,9 +40,13 @@ const Home = () => {
   const mostPopular = products
     .filter((product) => product.mostPopular)
     .slice(0, 5);
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadProducts());
+    dispatch(loadCategories());
+  }, []);
   return (
-    <>
+    <Helmet title="Home">
       <Slider />
       <Policy />
       <Banner />
@@ -96,7 +103,7 @@ const Home = () => {
         </Grid>
       </Section>
       <About />
-    </>
+    </Helmet>
   );
 };
 

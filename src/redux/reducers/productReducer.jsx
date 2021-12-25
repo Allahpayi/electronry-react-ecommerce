@@ -10,9 +10,8 @@ export const productReducer = (state = initialState, { type, payload }) => {
     case ActionTypes.GET_PRODUCTS:
       return { ...state, products: payload };
     case ActionTypes.GET_PRODUCT:
-      // const product = state.products.find((item) => item.id === payload);
-      // return { ...state.products, selectedProduct: product };
-      return { ...state.products, selectedProduct: payload };
+      const product = state.products.find((item) => item.id === payload);
+      return { ...state, selectedProduct: product };
     default:
       return state;
   }

@@ -99,7 +99,7 @@ const Card = ({ product }) => {
           zIndex={2}
         >
           {product.discount ? <Badge bg="var(--color-red)">Sale</Badge> : null}
-          {product.new ? <Badge bg="#65BC46">New</Badge> : null}
+          {product.newProduct ? <Badge bg="#65BC46">New</Badge> : null}
         </Group>
       </CardHeader>
       <CardBody>

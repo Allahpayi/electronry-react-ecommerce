@@ -134,7 +134,7 @@ const SideCart = ({ children, icon, title, count }) => {
         bg="var(--color-red)"
         badgeText={cart.items.length}
       >
-        <IconButton size="1.6" className="fal fa-shopping-cart"></IconButton>
+        <IconButton color="var(--color-main)" size="1.6" className="fal fa-shopping-cart"></IconButton>
       </BadgeButton>
       <Backdrop onClick={toggle} />
       <CartContent>

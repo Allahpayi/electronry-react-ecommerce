@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const ProductRating = styled.div`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 `;
 const Start = styled.i`
-  color: ${(props) => (props.empty ? "var(--color-gray)" : "#ffe234")};
+margin-right: .1rem;
+color: ${(props) => (props.empty ? "var(--color-gray)" : "#ffe234")};
 `;
 
 const Rating = () => {

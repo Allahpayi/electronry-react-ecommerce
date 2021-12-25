@@ -21,8 +21,10 @@ export const cartReducer = (state = initialState, { type, payload }) => {
         let newState = state.items.map((cartItem) => {
           if (cartItem.product.id === payload.product.id) {
             return Object.assign({}, addedItem, {
-              quantity: addedItem.quantity + payload.quantity,
+              quantity: addedItem.quantity + Number(payload.quantity),
               total: addedItem.total + payload.total,
+              size: addedItem.size,
+              color: addedItem.color,
             });
           }
           return cartItem;

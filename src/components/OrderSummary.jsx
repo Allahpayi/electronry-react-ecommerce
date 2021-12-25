@@ -48,11 +48,11 @@ const OrderSummary = ({ totalPrice }) => {
           <Select
             padding
             block
-            data={["Azerbaijany", "Turkey", "United States"]}
+            data={["azerbaijan", "turkey", "united states"]}
           />
-          <Select padding block data={["Sabirabad", "Baku", "Shirvan"]} />
+          <Select padding block data={["Baku", "Sabirabad", "shirvan"]} />
           <Input block placeholder="ZIP Code" />
-          <Button href="/cart" block outlinePrimary>
+          <Button href="/cart" outlinePrimary>
             Calculate Shipping
           </Button>
         </Form>
@@ -61,7 +61,7 @@ const OrderSummary = ({ totalPrice }) => {
             Coupon Code:
           </Text>
           <Input block />
-          <Group margin="1.2rem 0" alignItems="center">
+          <Group margin="1.5rem 0" alignItems="center">
             <Checkbox
               checked={isTerms}
               onClick={() => setIsTerms(!isTerms)}
@@ -79,10 +79,10 @@ const OrderSummary = ({ totalPrice }) => {
               <Link to="/">Terms & conditions</Link>
             </Text>
           </Group>
-          <Button disabled={!isTerms} href="checkout" block primary>
+          <Button disabled={!isTerms} href="checkout" primary>
             Proceed to Checkout
           </Button>
-          <Button href="/products" block outlinePrimary>
+          <Button margin=".9rem 0 0 0 " href="/products" outlinePrimary>
             Continue Shopping
           </Button>
         </Form>

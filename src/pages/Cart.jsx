@@ -7,6 +7,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import { useSelector } from "react-redux";
 import Button from "../components/form-elements/Button";
 import PageBanner from "../containers/PageBanner";
+import Helmet from "../components/Helmet";
 
 const CartContainer = styled.div``;
 
@@ -37,7 +38,6 @@ const TextMuted = styled.p`
 `;
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-
   const renderCart = () => {
     return (
       <CartContent>
@@ -64,11 +64,13 @@ const Cart = () => {
   };
 
   return (
-    <CartContainer>
-      <PageBanner />
-      <Breadcrumb data={[{ name: " my cart", href: "/cart" }]} />
-      {cart.items.length > 0 ? renderCart() : renderEmptyCart()}
-    </CartContainer>
+    <Helmet title="Cart"> 
+      <CartContainer>
+        <PageBanner />
+        <Breadcrumb data={[{ name: " my cart", href: "/cart" }]} />
+        {cart.items.length > 0 ? renderCart() : renderEmptyCart()}
+      </CartContainer>
+    </Helmet>
   );
 };
 

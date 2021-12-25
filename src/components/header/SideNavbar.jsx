@@ -2,20 +2,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { navLinks } from "../../config";
-import IconButton from "../form-elements/IconButton";
-import Logo from "./Logo";
-import Group from "../tools/Group";
 
 const Menu = styled.ul`
   position: fixed;
   top: 0;
   left: 0;
-  width: 20rem;
+  width: 22rem;
   height: 100%;
   transform: translateX(-20rem);
   user-select: none;
   visibility: hidden;
-  padding-top: 5rem;
   background-color: var(--color-main);
   z-index: 100;
   transition: all 0.3s ease;
@@ -35,7 +31,6 @@ const Backdrop = styled.div`
 `;
 
 const SideNav = styled.div`
-  
   @media (min-width: 762px) {
     display: none;
   }
@@ -59,6 +54,8 @@ const NavLink = styled(Link)`
   transition: all 0.4s ease;
 `;
 const NavItem = styled.li`
+  padding: 0.2rem 0;
+  font-weight: 500;
   border-top: 1px solid var(--border-color);
   &.active ${NavLink} {
     color: var(--color-red);
@@ -74,22 +71,6 @@ const SideNavbar = ({ toggle }) => {
     <SideNav className={`${isOpen ? "active" : ""}`}>
       <Backdrop onClick={() => setIsOpen(false)} />
       <Menu>
-        <Group
-          justifyContent="space-between"
-          alignItems="center"
-          top="0"
-          left="0"
-          position="absolute"
-          width="100%"
-          padding=".5rem 1rem 1rem 1rem"
-        >
-          <Logo />
-          <IconButton
-            size="1.6"
-            onClick={() => setIsOpen(false)}
-            className="fa fa-times"
-          />
-        </Group>
         {navLinks.map((navItem, index) => (
           <NavItem
             className={`${location.pathname === navItem.url ? "active" : ""}`}

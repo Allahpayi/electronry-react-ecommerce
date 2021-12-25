@@ -5,14 +5,15 @@ import styled from "styled-components";
 const CustomButtom = styled(Link)``;
 
 const Text = styled.button`
-  display: inline-block;
+  display: block;
   background-color: transparent;
   color: var(--color-black);
   transition: all 0.3s ease;
-  width: ${(props) => props.block && "100%"};
+  width: ${(props) => (props.block ? props.block : "100%")};
   border-width: 1px;
   border-style: solid;
   border-color: var(--border-color);
+
   /* Red Button */
   background-color: ${(props) => props.red && "var(--color-red)"};
   color: ${(props) => props.red && "var(--color-main)"};
@@ -40,7 +41,7 @@ const Text = styled.button`
   opacity: ${(props) => (props.disabled ? "0.7" : "1")};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   padding: 0.8rem 2rem;
-  margin: 0.5rem 0;
+  margin: ${(props) => (props.margin ? props.margin : "0.5rem 0")};
   border-radius: ${(props) => props.radius && "3rem"};
 `;
 const Button = ({
@@ -53,6 +54,8 @@ const Button = ({
   block,
   submit,
   radius,
+  onClick,
+  margin,
 }) => {
   return (
     <CustomButtom to={href}>
@@ -64,6 +67,8 @@ const Button = ({
         block={block}
         type={submit && "submit"}
         radius={radius}
+        margin={margin}
+        onClick={onClick}
       >
         {children}
       </Text>

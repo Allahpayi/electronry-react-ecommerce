@@ -5,10 +5,11 @@ const variables = css`
   :root {
     --color-main: white;
     --color-main2: #f8f8f8;
-    --color-red: #ef6454;
+    --color-main3:#161880;
+    --color-red: #E10600;
     --light-green: #10ffda;
     --color-black: #0b0335;
-    --color-black2: #3c3c3c;
+    --color-black2: #505050;
     --color-gray: #777777;
     --link-color: #007bff;
     --border-color: #d2d2d2;
