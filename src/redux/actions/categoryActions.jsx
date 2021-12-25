@@ -9,12 +9,20 @@ export const getCategories = (categories) => {
 };
 
 export const loadCategories = () => {
-  return (dispatch) => {
-    axios
-      .get(`http://localhost:3000/categories`)
-      .then((response) => {
-        dispatch(getCategories(response.data));
-      })
-      .catch((error) => console.log(error));
+  return async (dispatch) => {
+    const response = await axios.get(
+      `https://electronry-default-rtdb.firebaseio.com/categories.json`
+    );
+    const responseData = await response.data;
+    const newCategories = [];
+    for (const key in responseData) {
+      newCategories.push({
+        id: responseData[key].id,
+        img: responseData[key].img,
+        name: responseData[key].name,
+        url: responseData[key].url,
+      });
+    }
+    dispatch(getCategories(newCategories));
   };
 };

@@ -45,12 +45,35 @@ export const getMostPopularProducts = () => {
 };
 
 export const loadProducts = () => {
-  return (dispatch) => {
-    axios
-      .get(`http://localhost:3000/products`)
-      .then((response) => {
-        dispatch(getProducts(response.data));
-      })
-      .catch((error) => console.log(error));
+  return async (dispatch) => {
+    const response = await axios.get(
+      `https://electronry-default-rtdb.firebaseio.com/products.json`
+    );
+    const responseData = await response.data;
+    const newProduct = [];
+    for (const key in responseData) {
+      newProduct.push({
+        id: responseData[key].id,
+        categoryName: responseData[key].categoryName,
+        name: responseData[key].name,
+        description: responseData[key].description,
+        img: responseData[key].img,
+        sku: responseData[key].sku,
+        vendor: responseData[key].vendor,
+        availability: responseData[key].availability,
+        productType: responseData[key].productType,
+        price: responseData[key].price,
+        bestSelling: responseData[key].bestSelling,
+        topRated: responseData[key].topRated,
+        mostPopular: responseData[key].mostPopular,
+        newProduct: responseData[key].newProduct,
+        discount: responseData[key].discount,
+        discountRate: responseData[key].discountRate,
+        raiting: responseData[key].raiting,
+        size: responseData[key].size,
+        color: responseData[key].color,
+      });
+    }
+    dispatch(getProducts(newProduct));
   };
 };
