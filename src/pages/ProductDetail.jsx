@@ -156,9 +156,9 @@ const ProductDetail = () => {
     await dispatch(getBestSellingProducts());
   }, [dispatch, id]);
 
-  const setSelectedData = () => {
-    setActiveImg(selectedProduct.img[0]);
-    addedItemCart();
+  const setSelectedData = async () => {
+    await setActiveImg(selectedProduct.img[0]);
+    await addedItemCart();
   };
 
   useEffect(() => {
