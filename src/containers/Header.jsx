@@ -47,7 +47,7 @@ const Header = () => {
               className="fal fa-user-alt"
             />
           </Link>
-          <Link to="/favorities">
+          <Link to="/favorites">
             <IconButton
               color="var(--color-main)"
               size="1.6"

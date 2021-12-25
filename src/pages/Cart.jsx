@@ -29,7 +29,7 @@ const Empty = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 `;
 
 const TextMuted = styled.p`
@@ -40,23 +40,26 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const renderCart = () => {
     return (
-      <CartContent>
-        <ProductList>
-          <Table thead={["Product", "Price", "Quantity", "Total", ""]}>
-            {cart.items.map((cartItem) => (
-              <CartItem key={cartItem.product.id} data={cartItem}></CartItem>
-            ))}
-          </Table>
-        </ProductList>
-        <OrderSummary totalPrice={cart.totalPrice} />
-      </CartContent>
+      <>
+        <Breadcrumb data={[{ name: " my cart", href: "/cart" }]} />
+        <CartContent>
+          <ProductList>
+            <Table thead={["Product", "Price", "Quantity", "Total", ""]}>
+              {cart.items.map((cartItem) => (
+                <CartItem key={cartItem.product.id} data={cartItem}></CartItem>
+              ))}
+            </Table>
+          </ProductList>
+          <OrderSummary totalPrice={cart.totalPrice} />
+        </CartContent>
+      </>
     );
   };
   const renderEmptyCart = () => {
     return (
       <Empty>
         <TextMuted>Your cart is currently empty.</TextMuted>
-        <Button outlinePrimary block radius href="/products ">
+        <Button outlinePrimary block radius href="/ ">
           Continue Shopping
         </Button>
       </Empty>
@@ -64,10 +67,8 @@ const Cart = () => {
   };
 
   return (
-    <Helmet title="Cart"> 
+    <Helmet title="Cart">
       <CartContainer>
-        <PageBanner />
-        <Breadcrumb data={[{ name: " my cart", href: "/cart" }]} />
         {cart.items.length > 0 ? renderCart() : renderEmptyCart()}
       </CartContainer>
     </Helmet>

@@ -12,7 +12,14 @@ import CategoryCard from "../components/cards/CategoryCard";
 import SubBanner from "../containers/SubBanner";
 import Brands from "../containers/Brands";
 import Helmet from "../components/Helmet";
-import { loadProducts } from "../redux/actions/productActions";
+import {
+  getBestSellingProducts,
+  getDiscountProducts,
+  getMostPopularProducts,
+  getNewProducts,
+  getTopRatedProducts,
+  loadProducts,
+} from "../redux/actions/productActions";
 import { loadCategories } from "../redux/actions/categoryActions";
 
 const BannerMiddle = styled.img`
@@ -26,25 +33,36 @@ const BannerMiddle = styled.img`
 `;
 
 const Home = () => {
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.allProducts.products);
   const categories = useSelector((state) => state.allCategories.categories);
+  const discountProducts = useSelector(
+    (state) => state.allProducts.discountProducts
+  );
+  const newProducts = useSelector((state) => state.allProducts.newProducts);
+  const bestSellingProducts = useSelector(
+    (state) => state.allProducts.bestSellingProducts
+  );
+  const topRatedProducts = useSelector(
+    (state) => state.allProducts.topRatedProducts
+  );
+  const mostPopularProducts = useSelector(
+    (state) => state.allProducts.mostPopularProducts
+  );
 
-  const discount = products.filter((product) => product.discount).slice(0, 5);
-  const newProduct = products
-    .filter((product) => product.new && !product.discount)
-    .slice(0, 5);
-  const bestSelling = products
-    .filter((product) => product.bestSelling)
-    .slice(0, 5);
-  const topRated = products.filter((product) => product.topRated).slice(0, 5);
-  const mostPopular = products
-    .filter((product) => product.mostPopular)
-    .slice(0, 5);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadProducts());
-    dispatch(loadCategories());
+  useEffect(async () => {
+    await dispatch(loadProducts());
+    await dispatch(loadCategories());
   }, []);
+
+  useEffect(() => {
+    dispatch(getDiscountProducts());
+    dispatch(getNewProducts());
+    dispatch(getBestSellingProducts());
+    dispatch(getTopRatedProducts());
+    dispatch(getMostPopularProducts());
+  }, [products]);
+
   return (
     <Helmet title="Home">
       <Slider />
@@ -52,7 +70,7 @@ const Home = () => {
       <Banner />
       <Section red title="flash deals" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-          {discount.map((product) => (
+          {discountProducts.slice(0, 5).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
@@ -68,7 +86,7 @@ const Home = () => {
       </Section>
       <Section title="What's New" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-          {newProduct.map((product) => (
+          {newProducts.slice(0, 5).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
@@ -76,7 +94,7 @@ const Home = () => {
       <SubBanner img={["/assets/images/banner-appliances.jpg"]} />
       <Section title="Top Rated" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-          {topRated.map((product) => (
+          {topRatedProducts.slice(0, 5).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
@@ -89,7 +107,7 @@ const Home = () => {
       />
       <Section title="Best Selling" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-          {bestSelling.map((product) => (
+          {bestSellingProducts.slice(0, 5).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>
@@ -97,7 +115,7 @@ const Home = () => {
       <Brands />
       <Section title="Most Popular" link={true}>
         <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-          {mostPopular.map((product) => (
+          {mostPopularProducts.slice(0, 5).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Grid>

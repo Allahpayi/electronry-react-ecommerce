@@ -14,6 +14,35 @@ export const getProduct = (id) => {
     payload: id,
   };
 };
+export const getDiscountProducts = () => {
+  return {
+    type: ActionTypes.GET_DICOUNT_PRODUCTS,
+  };
+};
+
+export const getNewProducts = () => {
+  return {
+    type: ActionTypes.GET_NEW_PRODUCTS,
+  };
+};
+
+export const getBestSellingProducts = () => {
+  return {
+    type: ActionTypes.GET_BEST_SELLING_PRODUCTS,
+  };
+};
+
+export const getTopRatedProducts = () => {
+  return {
+    type: ActionTypes.GET_TOP_RATED_PRODUCTS,
+  };
+};
+
+export const getMostPopularProducts = () => {
+  return {
+    type: ActionTypes.GET_MOST_POPULAR_PRODUCTS,
+  };
+};
 
 export const loadProducts = () => {
   return (dispatch) => {

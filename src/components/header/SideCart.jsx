@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { currencyFormat } from "../../utils/currency-format";
 import Button from "../form-elements/Button";
 import SideCartItem from "../cards/SideCartItem";
-import { useSelector } from "react-redux";
 import Text from "../tools/Text";
 import Group from "../tools/Group";
 import Checkbox from "../form-elements/Checkbox";
@@ -96,15 +96,13 @@ const SideCart = ({ children, icon, title, count }) => {
               <Link to="/">Terms & conditions</Link>
             </Text>
           </Group>
-          <Group
-            onClick={toggle}
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <Button disabled={!isTerms} red href="/checkout">
+          <Group justifyContent="space-between" alignItems="center">
+            <Button onClick={toggle} disabled={!isTerms} red href="/checkout">
               Check Out
             </Button>
-            <Button href="/cart">View Cart</Button>
+            <Button onClick={toggle} href="/cart">
+              View Cart
+            </Button>
           </Group>
         </Group>
       </>
@@ -118,7 +116,12 @@ const SideCart = ({ children, icon, title, count }) => {
           <Text align="center" weight="300" fontSize="1.1">
             Your cart is currently empty.
           </Text>
-          <Button outlinePrimary block href="/products ">
+          <Button
+            onClick={toggle}
+            outlinePrimary
+            block="100%"
+            href="/products "
+          >
             Continue Shopping
           </Button>
         </Group>
@@ -134,7 +137,11 @@ const SideCart = ({ children, icon, title, count }) => {
         bg="var(--color-red)"
         badgeText={cart.items.length}
       >
-        <IconButton color="var(--color-main)" size="1.6" className="fal fa-shopping-cart"></IconButton>
+        <IconButton
+          color="var(--color-main)"
+          size="1.6"
+          className="fal fa-shopping-cart"
+        ></IconButton>
       </BadgeButton>
       <Backdrop onClick={toggle} />
       <CartContent>

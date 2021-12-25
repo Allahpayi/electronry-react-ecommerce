@@ -1,8 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getProduct, loadProducts } from "../redux/actions/productActions";
+import {
+  getBestSellingProducts,
+  getProduct,
+  loadProducts,
+} from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 import { currencyFormat } from "../utils/currency-format";
 import { discountPrice } from "../utils/discount-price";
@@ -97,7 +101,12 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const allProducts = useSelector((state) => state.allProducts.products);
-  const product = useSelector((state) => state.allProducts.selectedProduct);
+  const selectedProduct = useSelector(
+    (state) => state.allProducts.selectedProduct
+  );
+  const bestSellingProducts = useSelector(
+    (state) => state.allProducts.bestSellingProducts
+  );
   const cart = useSelector((state) => state.cart);
   const [activeImg, setActiveImg] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -105,58 +114,54 @@ const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [addedCart, setAddedCart] = useState(false);
   const id = Number(params.id);
+  const breadcrumbData = [
+    { name: " Product ", href: "/products" },
+    { name: selectedProduct.name, href: `/product/${id}` },
+  ];
 
-  const addedItemCart = useCallback(() => {
+  const addedItemCart = () => {
     cart.items.map((item) => {
       if (item.product.id === id) {
         setSelectedColor(item.color);
         setSelectedSize(item.size);
-        console.log(item.quantity);
         setAddedCart(true);
       } else {
-        setSelectedSize(product.size[0]);
-        setSelectedColor(product.color[0]);
+        setSelectedSize(selectedProduct.size[0]);
+        setSelectedColor(selectedProduct.color[0]);
       }
     });
-  }, [cart.items, id, product.color, product.size]);
-
-  if (cart.items) {
-  }
-  const breadcrumbData = [
-    { name: " Product ", href: "/products" },
-    { name: product.name, href: `/product/${id}` },
-  ];
-
-  const selectedProduct = useCallback(async () => {
-    await dispatch(loadProducts());
-    await dispatch(getProduct(id));
-    addedItemCart();
-    setActiveImg(product.img[0]);
-  }, [id, product, dispatch, addedItemCart]);
-
-  useEffect(() => {
-    selectedProduct();
-  }, [selectedProduct, addedItemCart]);
+  };
 
   const addToCartHandler = (product) => {
     dispatch(
       addToCart({
         product,
         quantity: quantity,
-        total: product.discount
-          ? discountPrice(product.price, product.discountRate)
-          : product.price,
+        total: selectedProduct.discount
+          ? discountPrice(selectedProduct.price, selectedProduct.discountRate)
+          : selectedProduct.price,
         size: selectedSize,
         color: selectedColor,
       })
     );
   };
 
-  const bestSelling = allProducts
-    .filter((product) => product.bestSelling)
-    .slice(0, 5);
+  useEffect(async () => {
+    await dispatch(loadProducts());
+  }, []);
+
+  useEffect(async () => {
+    await dispatch(getProduct(id));
+  }, [allProducts]);
+
+  useEffect(async () => {
+    await dispatch(getBestSellingProducts());
+    await setActiveImg(selectedProduct.img[0]);
+    await addedItemCart();
+  }, [selectedProduct]);
+
   return (
-    <Helmet title={product.name}>
+    <Helmet title={selectedProduct.name}>
       <ProductDetailContainer>
         <ProductDetailHeader>
           <Breadcrumb data={breadcrumbData} />
@@ -167,20 +172,20 @@ const ProductDetail = () => {
               <ProductMainImg src={activeImg} />
             </ImageWrapper>
             <ProductOtherImages>
-              {product.img &&
-                product.img.map((productImg, index) => (
+              {selectedProduct.img &&
+                selectedProduct.img.map((productImg, index) => (
                   <ProductImg
                     onClick={() => setActiveImg(productImg)}
                     key={index}
                     src={productImg}
-                    alt={product.name + index}
+                    alt={selectedProduct.name + index}
                   />
                 ))}
             </ProductOtherImages>
           </ProductImages>
           <ProductInfo>
             <Text fontSize="1.5" lineHeight="2" weight="500">
-              {product.name}
+              {selectedProduct.name}
             </Text>
             <Group alignItems="center" margin=".6rem 0">
               <Rating />
@@ -192,7 +197,7 @@ const ProductDetail = () => {
               >
                 2 reviews
               </Text>
-              {product.discount && (
+              {selectedProduct.discount && (
                 <Text color="var(--color-red)">
                   <i className="fal fa-fire-alt"></i> 8 sold in last 25 hours
                 </Text>
@@ -202,36 +207,36 @@ const ProductDetail = () => {
               <Text color="var(--color-gray)" weight="300">
                 Vendor:
               </Text>
-              <Text>{product.vendor}</Text>
+              <Text>{selectedProduct.vendor}</Text>
             </Group>
             <Group>
               <Text color="var(--color-gray)" weight="300">
                 SKU:
               </Text>
-              <Text>{product.sku}</Text>
+              <Text>{selectedProduct.sku}</Text>
             </Group>
             <Group>
               <Text color="var(--color-gray)" weight="300">
                 Availability:
               </Text>
-              <Text>{product.availability}</Text>
+              <Text>{selectedProduct.availability}</Text>
             </Group>
             <Group>
               <Text color="var(--color-gray)" weight="300">
                 Product Type:
               </Text>
-              <Text>{product.productType}</Text>
+              <Text>{selectedProduct.productType}</Text>
             </Group>
             <Group margin=".6rem 0 0 0 " alignItems="center">
               <Text
                 margin="0 1rem 0 .2rem"
-                color={`${product.discount && "var(--color-red)"}`}
+                color={`${selectedProduct.discount && "var(--color-red)"}`}
                 fontSize="1.4"
                 weight="600"
               >
-                {currencyFormat(product.price)}
+                {currencyFormat(selectedProduct.price)}
               </Text>
-              {product.discount && (
+              {selectedProduct.discount && (
                 <Text
                   color="var(--color-black2)"
                   fontSize="1.4"
@@ -239,20 +244,23 @@ const ProductDetail = () => {
                   weight="300"
                 >
                   {currencyFormat(
-                    discountPrice(product.price, product.discountRate)
+                    discountPrice(
+                      selectedProduct.price,
+                      selectedProduct.discountRate
+                    )
                   )}
                 </Text>
               )}
             </Group>
-            <Text weight="300">{product.description}</Text>
+            <Text weight="300">{selectedProduct.description}</Text>
             <Group direction="column" margin=".6rem 0 0 0">
               <Group margin="0 0 .4rem 0">
                 <Text color="var(--color-gray)">Size:</Text>
                 <Text transform="uppercase">{selectedSize}</Text>
               </Group>
               <Group>
-                {product.size &&
-                  product.size.map((item) => (
+                {selectedProduct.size &&
+                  selectedProduct.size.map((item) => (
                     <Size
                       key={item}
                       onClick={() => setSelectedSize(item)}
@@ -269,8 +277,8 @@ const ProductDetail = () => {
                 <Text transform="capitalize">{selectedColor}</Text>
               </Group>
               <Group>
-                {product.color &&
-                  product.color.map((item) => (
+                {selectedProduct.color &&
+                  selectedProduct.color.map((item) => (
                     <Color
                       key={item}
                       item={item}
@@ -289,14 +297,14 @@ const ProductDetail = () => {
                 Subtotal:
               </Text>
               <Text weight="500" fontSize="1.1">
-                {product.discount
+                {selectedProduct.discount
                   ? currencyFormat(
                       discountPrice(
-                        product.price * quantity,
-                        product.discountRate
+                        selectedProduct.price * quantity,
+                        selectedProduct.discountRate
                       )
                     )
-                  : currencyFormat(product.price * quantity)}
+                  : currencyFormat(selectedProduct.price * quantity)}
               </Text>
             </Group>
             <Group justifyContent="space-between">
@@ -307,7 +315,7 @@ const ProductDetail = () => {
               />
               <Button
                 margin="0"
-                onClick={() => addToCartHandler(product)}
+                onClick={() => addToCartHandler(selectedProduct)}
                 primary
                 radius="true"
                 block="20rem"
@@ -325,8 +333,8 @@ const ProductDetail = () => {
         <SubBanner img={["/assets/images/banner-detail.png"]} />
         <Section title="RELATED PRODUCTS" link={true}>
           <Grid col={1} smCol={2} mdCol={3} lgCol={5} gap={20}>
-            {bestSelling.map((product) => (
-              <Card key={product.id} product={product} />
+            {bestSellingProducts.slice(0, 5).map((product) => (
+              <Card key={selectedProduct.id} product={product} />
             ))}
           </Grid>
         </Section>
